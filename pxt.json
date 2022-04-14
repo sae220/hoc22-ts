@@ -1,0 +1,17 @@
+{
+    "name": "minecraft-hoc22",
+    "version": "1.13.2",
+    "dependencies": {
+        "core": "*",
+        "builder": "*"
+    },
+    "files": [
+        "README.md",
+        "hoc22.ts"
+
+    ],
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "tsprj"
+}
