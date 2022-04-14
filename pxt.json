@@ -8,8 +8,11 @@
     "files": [
         "README.md",
         "hoc22.ts"
-
     ],
+    "targetVersions": {
+        "target": "1.6.11",
+        "targetId": "minecraft"
+    },
     "supportedTargets": [
         "minecraft"
     ],

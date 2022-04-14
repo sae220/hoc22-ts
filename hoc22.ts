@@ -43,8 +43,35 @@ const turns = [
     RIGHT_TURN
 ]
 
-//%  block="Wonder Woman" weight=200 color=#BF9B30 icon="\u2605"
-namespace ww {
+//%  block="Hour of Code 2022" weight=200 color=#BF9B30 icon="\u2605"
+namespace hoc22 {
+
+    /**
+     * Summon Chicken for weight activity (POC1-b)
+     */
+    //% block="Summon Chicken"
+    export function summonChickenWeight(): void {
+
+        mobs.spawn(CHICKEN, world(-15, 72, -24))
+    }
+
+    /**
+     * Summon Sheep for weight activity (POC1-b)
+     */
+    //% block="Summon Chicken"
+    export function summonSheepWeight(): void {
+
+        mobs.spawn(SHEEP, world(-15, 72, -24))
+    }
+
+    /**
+     * Summon Cow for weight activity (POC1-blocks)
+     */
+    //% block="Summon Chicken"
+    export function summonCowWeight(): void {
+
+        mobs.spawn(COW, world(-15, 72, -24))
+    }
 
     /**
      * Move Wonder Woman n spaces in the d direction
