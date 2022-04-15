@@ -20,7 +20,7 @@ namespace hoc22 {
     }
 
     /**
-     * Summon Cow for weight activity (POC1-blocks)
+     * Summon Cow for weight activity (POC1-b)
      */
     //% block="Summon Cow"
     export function summonCowWeight() {
