@@ -1,10 +1,10 @@
 // enums
 enum Weight {
-    //% block="chicken"
+    //% blockIdentity="mobs.animal" block="chicken"
     CHICKEN,
-    //% block="sheep"
+    //% blockIdentity="mobs.animal" block="sheep"
     SHEEP,
-    //% block="cow"
+    //% blockIdentity="mobs.animal" block="cow"
     COW
 }
 
