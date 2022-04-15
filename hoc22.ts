@@ -1,31 +1,24 @@
-//%  block="Hour of Code 2022" weight=200 color=#BF9B30 icon="\u2605"
+// enums
+enum Weight {
+    //% block="chicken"
+    CHICKEN,
+    //% block="sheep"
+    SHEEP,
+    //% block="cow"
+    COW
+}
+
+//%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
 namespace hoc22 {
 
     /**
-     * Summon Chicken for weight activity (POC1-b)
+     * Summon weight (POC1-b)
      */
-    //% block="Summon Chicken"
-    export function summonChickenWeight() {
+    //% block="summon %w weight"
+    export function summonWeight(w: Weight): void {
 
-        mobs.spawn(CHICKEN, world(-15, 72, -24));
+        mobs.spawn(w, world(-15, 72, -24));
     }
 
-    /**
-     * Summon Sheep for weight activity (POC1-b)
-     */
-    //% block="Summon Sheep"
-    export function summonSheepWeight() {
-
-        mobs.spawn(SHEEP, world(-15, 72, -24));
-    }
-
-    /**
-     * Summon Cow for weight activity (POC1-b)
-     */
-    //% block="Summon Cow"
-    export function summonCowWeight() {
-
-        mobs.spawn(COW, world(-15, 72, -24));
-    }
 
 }
