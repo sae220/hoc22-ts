@@ -6,14 +6,14 @@ enum Weight {
 }
 
 enum Direction {
-    //% block="up"
-    UP,
-    //% block="down"
-    DOWN,
-    //% block="left"
-    LEFT,
-    //% block="right"
-    RIGHT
+    //% block=up alias=UP
+    Up,
+    //% block=down alias=DOWN
+    Down,
+    //% block=left alias=LEFT
+    Left,
+    //% block=right alias=RIGHT
+    Right
 }
 
 
