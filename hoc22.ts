@@ -1,10 +1,7 @@
 // enums
 enum Weight {
-    //% blockIdentity="mobs.animal" block="chicken"
     CHICKEN,
-    //% blockIdentity="mobs.animal" block="sheep"
     SHEEP,
-    //% blockIdentity="mobs.animal" block="cow"
     COW
 }
 
@@ -63,7 +60,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon %w weight"
+    //% block="summon %w weight 2"
     export function summonWeight(w: Weight): void {
 
         mobs.spawn(w, weightDropPosition);
@@ -76,7 +73,6 @@ namespace hoc22 {
     //% block="agent move %d by %n"
     export function agentMove(d: Direction, n: number): void {
         const direction = directions[d];
-        agent.move(direction, n)
-
+        agent.move(direction, 1)
     }
 }
