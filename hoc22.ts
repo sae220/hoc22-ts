@@ -6,15 +6,16 @@ enum Weight {
 }
 
 enum Direction {
-    //% block="forward"
-    Forward,
-    //% block="back"
-    Back,
+    //% block="up"
+    Up,
+    //% block="down"
+    Down,
     //% block="left"
     Left,
     //% block="right"
     Right
 }
+
 
 enum ColoredBlocks {
     //% blockIdentity="blocks.block" enumval=262380 block="yellow"
@@ -37,8 +38,8 @@ const blockDropPosition = world(0, 0, 0)
 const weightDropPosition = world(27, 27, 33)
 
 const directions = [
-    FORWARD,
-    BACK,
+    UP,
+    DOWN,
     LEFT,
     RIGHT
 ];
