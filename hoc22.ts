@@ -7,13 +7,13 @@ enum Weight {
 
 enum Direction {
     //% block="up"
-    Up,
+    UP = SixDirection.Up,
     //% block="down"
-    Down,
+    DOWN = SixDirection.Down,
     //% block="left"
-    Left,
+    LEFT = SixDirection.Left,
     //% block="right"
-    Right
+    RIGHT = SixDirection.Right
 }
 
 
