@@ -50,7 +50,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon %w weight 2"
+    //% block="summon %w weight"
     export function summonWeight(w: Weight): void {
 
         mobs.spawn(w, weightDropPosition);
