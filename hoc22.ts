@@ -2,7 +2,7 @@
 enum Weight {
     CHICKEN = 10,
     COW = 11,
-    SHEEP = 12
+    SHEEP = 13
 }
 
 
@@ -62,7 +62,6 @@ namespace hoc22 {
      */
     //% block="agent move %d by %n"
     export function agentMove(d: SixDirection, n: number): void {
-        //const direction = directions[d];
-        agent.move(d, 1)
+        agent.move(d, n)
     }
 }
