@@ -1,8 +1,8 @@
 // enums
 enum Weight {
-    Chicken,
-    Cow,
-    Sheep
+    CHICKEN,
+    COW,
+    SHEEP
 }
 
 
