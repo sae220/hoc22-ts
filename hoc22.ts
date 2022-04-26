@@ -5,17 +5,6 @@ enum Weight {
     COW
 }
 
-enum Direction {
-    //% block=up alias=UP
-    Up,
-    //% block=down alias=DOWN
-    Down,
-    //% block=left alias=LEFT
-    Left,
-    //% block=right alias=RIGHT
-    Right
-}
-
 
 enum ColoredBlocks {
     //% blockIdentity="blocks.block" enumval=262380 block="yellow"
@@ -72,8 +61,8 @@ namespace hoc22 {
      * Agent Move (POC1-c)
      */
     //% block="agent move %d by %n"
-    export function agentMove(d: Direction, n: number): void {
-        const Direction = directions[d];
-        agent.move(Direction, 1)
+    export function agentMove(d: SixDirection, n: number): void {
+        //const direction = directions[d];
+        agent.move(d, 1)
     }
 }
