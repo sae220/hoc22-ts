@@ -1,13 +1,7 @@
 // enums
 enum Weight {
-    //% block="chicken" 
-    //% jres alias=CHICKEN
     Chicken = 10,
-    //% block="cow" 
-    //% jres alias=COW
     Cow = 11,
-    //% block="sheep"
-    //% jres alias=SHEEP
     Sheep = 13
 }
 
