@@ -73,7 +73,7 @@ namespace hoc22 {
      */
     //% block="agent move %d by %n"
     export function agentMove(d: Direction, n: number): void {
-        const direction = directions[d];
-        agent.move(direction, 1)
+        const Direction = directions[d];
+        agent.move(Direction, 1)
     }
 }
