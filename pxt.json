@@ -8,10 +8,12 @@
     "files": [
         "README.md",
         "hoc22.ts",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "main.py",
+        "main.ts"
     ],
     "targetVersions": {
-        "target": "1.6.11",
+        "target": "1.6.13",
         "targetId": "minecraft"
     },
     "supportedTargets": [

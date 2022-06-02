@@ -22,6 +22,27 @@ enum ColoredBlocks {
 
 }
 
+enum ColoredBlockDirection {
+    //% block=left alias=LEFT
+    Left,
+    //% block=right alias=RIGHT
+    Right,
+    //% block=up alias=UP
+    Up,
+    //% block=down alias=DOWN
+    Down
+}
+
+enum MovementBlock {
+    Forward = Block.PinkConcrete,
+    Back = Block.GrayConcrete,
+    Left = Block.LightBlueConcrete,
+    Right = Block.YellowConcrete,
+    Up = Block.OrangeConcrete,
+    Down = Block.MagentaConcrete,
+    Invalid = Block.Bedrock
+}
+
 // global variables
 const blockDropPosition = world(0, 0, 0)
 const weightDropPosition = world(27, 27, 33)
@@ -63,5 +84,48 @@ namespace hoc22 {
     //% block="agent move %d by %n"
     export function agentMove(d: SixDirection, n: number): void {
         agent.move(d, n)
+    }
+
+    /**
+     * Cursor Move (testing)
+     */
+    //% block="cursor move %direction "
+    export function cursorMove(direction: ColoredBlockDirection): void {
+        moveInDirection(direction)
+    }
+
+    // helper functions
+    function convertColoredBlockDirectionToSixDirection(direction: ColoredBlockDirection) : SixDirection {
+        switch (direction) {
+            case ColoredBlockDirection.Left:
+                return SixDirection.Left
+            case ColoredBlockDirection.Right:
+                return SixDirection.Right
+            case ColoredBlockDirection.Up:
+                return SixDirection.Up
+            case ColoredBlockDirection.Down:
+                return SixDirection.Down
+        }
+    }
+
+    function moveInDirection(direction: ColoredBlockDirection) {
+        const block = convertDirectionToMovementBlock(direction)
+
+        blocks.place(block, blockDropPosition)
+    }
+
+    function convertDirectionToMovementBlock(direction: ColoredBlockDirection) : MovementBlock {
+        switch(direction) {
+            case ColoredBlockDirection.Left:
+                return MovementBlock.Left
+            case ColoredBlockDirection.Right:
+                return MovementBlock.Right
+            case ColoredBlockDirection.Up:
+                return MovementBlock.Up
+            case ColoredBlockDirection.Down:
+                return MovementBlock.Down
+        }
+
+        return MovementBlock.Invalid
     }
 }
