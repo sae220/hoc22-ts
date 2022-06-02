@@ -89,25 +89,13 @@ namespace hoc22 {
     /**
      * Cursor Move (testing)
      */
-    //% block="cursor move %direction "
+    //% block="cursor move %direction"
     export function cursorMove(direction: ColoredBlockDirection): void {
         moveInDirection(direction)
+        loops.pause(10000)
     }
 
     // helper functions
-    function convertColoredBlockDirectionToSixDirection(direction: ColoredBlockDirection) : SixDirection {
-        switch (direction) {
-            case ColoredBlockDirection.Left:
-                return SixDirection.Left
-            case ColoredBlockDirection.Right:
-                return SixDirection.Right
-            case ColoredBlockDirection.Up:
-                return SixDirection.Up
-            case ColoredBlockDirection.Down:
-                return SixDirection.Down
-        }
-    }
-
     function moveInDirection(direction: ColoredBlockDirection) {
         const block = convertDirectionToMovementBlock(direction)
 
