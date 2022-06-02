@@ -92,7 +92,7 @@ namespace hoc22 {
     //% block="cursor move %direction"
     export function cursorMove(direction: ColoredBlockDirection): void {
         moveInDirection(direction)
-        loops.pause(10000)
+        loops.pause(100)
     }
 
     // helper functions
