@@ -8,9 +8,7 @@
     "files": [
         "README.md",
         "hoc22.ts",
-        "tutorial-info-cache.json",
-        "main.py",
-        "main.ts"
+        "tutorial-info-cache.json"
     ],
     "targetVersions": {
         "target": "1.6.13",

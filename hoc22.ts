@@ -33,6 +33,17 @@ enum ColoredBlockDirection {
     Down
 }
 
+enum ChessBlockDirection {
+    //% block=left alias=LEFT
+    Left,
+    //% block=right alias=RIGHT
+    Right,
+    //% block=forward alias=FORWARD
+    Forward,
+    //% block=back alias=BACK
+    Back
+}
+
 enum MovementBlock {
     Forward = Block.PinkConcrete,
     Back = Block.GrayConcrete,
@@ -43,9 +54,26 @@ enum MovementBlock {
     Invalid = Block.Bedrock
 }
 
+enum ChessKingMovementBlock {
+    Forward = Block.OrangeConcrete,
+    Back = Block.MagentaConcrete,
+    Left = Block.LightBlueConcrete,
+    Right = Block.YellowConcrete,
+    Invalid = Block.Bedrock
+}
+
+enum ChessQueenMovementBlock {
+    Forward = Block.LimeConcrete,
+    Back = Block.PinkConcrete,
+    Left = Block.GrayConcrete,
+    Right = Block.LightGrayConcrete,
+    Invalid = Block.Bedrock
+}
+
 // global variables
-const blockDropPosition = world(0, 0, 0)
+const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(27, 27, 33)
+const communicationsTimeout = 100
 
 const directions = [
     UP,
@@ -63,7 +91,7 @@ namespace hoc22 {
     //% block="drop %b block"
     export function summonColoredBlock(b: ColoredBlocks): void {
 
-        blocks.place(b, blockDropPosition);
+        blocks.place(b, placeBlockMechanicsCommunicationPos);
 
     }
 
@@ -87,19 +115,182 @@ namespace hoc22 {
     }
 
     /**
-     * Cursor Move (testing)
+     * Place Block
+     */
+    //% block="place block"
+    export function placeBlock(): void {
+        placeBlockSignal()
+    }
+
+    /**
+     * Baking Bread Harvest Wheat
+     */
+    //% block="harvest wheat"
+    export function bakingBreadWheat(): void {
+        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Baking Bread Mill Wheat
+     */
+    //% block="mill wheat"
+    export function bakingBreadGrain(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Baking Bread Make Dough
+     */
+    //% block="make dough"
+    export function bakingBreadDough(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Baking Bread Bake Into Bread
+     */
+    //% block="bake into bread"
+    export function bakingBreadBread(): void {
+        blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+      * Feed The House Apple
+      */
+    //% block="feed house apple"
+    export function feedHouseApple(): void {
+        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Feed The House Salmon
+      */
+    //% block="feed house salmon"
+    export function feedHouseSalmon(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Feed The House Mushroom Stew
+      */
+    //% block="feed house mushroom strew"
+    export function feedHouseMushroomStew(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+      * Dinner Table Swap Red
+      */
+    //% block="swap red plates"
+    export function dinnerTableSwapRed(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Dinner Table Swap Magenta
+      */
+    //% block="swap magenta plates"
+    export function dinnerTableSwapMagenta(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Dinner Table Swap Blue
+      */
+    //% block="swap blue plates"
+    export function dinnerTableSwapBlue(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Dinner Table Swap Yellow
+      */
+    //% block="swap yellow plates"
+    export function dinnerTableSwapYellow(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+      * Mosaic Push Up
+      */
+    //% block="push blocks up"
+    export function mosaicPushUp(): void {
+        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Mosaic Push Down
+      */
+    //% block="push blocks down"
+    export function mosaicPushdown(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Mosaic Push Left
+      */
+    //% block="push blocks left"
+    export function mosaicPushleft(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Mosaic Push right
+      */
+    //% block="push blocks right"
+    export function mosaicPushRight(): void {
+        blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+     * Cursor Move
      */
     //% block="cursor move %direction"
     export function cursorMove(direction: ColoredBlockDirection): void {
-        moveInDirection(direction)
-        loops.pause(100)
+        moveCursorInDirection(direction)
+    }
+
+    /**
+     * Move King
+     */
+    //% block="move King %direction"
+    export function kingMove(direction: ChessBlockDirection): void {
+        moveKingChessInDirection(direction)
     }
 
     // helper functions
-    function moveInDirection(direction: ColoredBlockDirection) {
+    function resetSignal(): void {
+        blocks.place(Block.WhiteConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    function placeBlockSignal(): void{
+        blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    function moveCursorInDirection(direction: ColoredBlockDirection) {
         const block = convertDirectionToMovementBlock(direction)
 
-        blocks.place(block, blockDropPosition)
+        blocks.place(block, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    function moveKingChessInDirection(direction: ChessBlockDirection) {
+        const block = convertKingChessDirectionToMovementBlock(direction)
+
+        blocks.place(block, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    function moveQueenChessInDirection(direction: ChessBlockDirection) {
+        const block = convertQueenChessDirectionToMovementBlock(direction)
+
+        blocks.place(block, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
     }
 
     function convertDirectionToMovementBlock(direction: ColoredBlockDirection) : MovementBlock {
@@ -115,5 +306,35 @@ namespace hoc22 {
         }
 
         return MovementBlock.Invalid
+    }
+
+    function convertKingChessDirectionToMovementBlock(direction: ChessBlockDirection): ChessKingMovementBlock {
+        switch (direction) {
+            case ChessBlockDirection.Left:
+                return ChessKingMovementBlock.Left
+            case ChessBlockDirection.Right:
+                return ChessKingMovementBlock.Right
+            case ChessBlockDirection.Back:
+                return ChessKingMovementBlock.Back
+            case ChessBlockDirection.Forward:
+                return ChessKingMovementBlock.Forward
+        }
+
+        return ChessKingMovementBlock.Invalid
+    }
+
+    function convertQueenChessDirectionToMovementBlock(direction: ChessBlockDirection): ChessQueenMovementBlock {
+        switch (direction) {
+            case ChessBlockDirection.Left:
+                return ChessQueenMovementBlock.Left
+            case ChessBlockDirection.Right:
+                return ChessQueenMovementBlock.Right
+            case ChessBlockDirection.Back:
+                return ChessQueenMovementBlock.Back
+            case ChessBlockDirection.Forward:
+                return ChessQueenMovementBlock.Forward
+        }
+
+        return ChessQueenMovementBlock.Invalid
     }
 }
