@@ -74,6 +74,7 @@ enum ChessQueenMovementBlock {
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(27, 27, 33)
 const communicationsTimeout = 100
+const teleportTimeout = 1000
 
 const directions = [
     UP,
@@ -161,7 +162,7 @@ namespace hoc22 {
     //% block="teleport to light blue lever"
     export function teleportLightBlueLever(): void {
         player.teleport(world(13, 71, 71))
-        loops.pause(1000)
+        loops.pause(teleportTimeout)
     }
     /**
      * Teleport to Magenta Lever
@@ -169,7 +170,7 @@ namespace hoc22 {
     //% block="teleport to magenta lever"
     export function teleportMagentaLever(): void {
         player.teleport(world(23, 71, 71))
-        loops.pause(1000)
+        loops.pause(teleportTimeout)
     }
     /**
      * Teleport to Yellow Lever
@@ -177,7 +178,7 @@ namespace hoc22 {
     //% block="teleport to yellow lever"
     export function teleportYellowLever(): void {
         player.teleport(world(11, 71, 71))
-        loops.pause(1000)
+        loops.pause(teleportTimeout)
     }
     /**
      * Teleport to Orange Lever
@@ -185,7 +186,7 @@ namespace hoc22 {
     //% block="teleport to orange lever"
     export function teleportOrangeLever(): void {
         player.teleport(world(21, 71, 71))
-        loops.pause(1000)
+        loops.pause(teleportTimeout)
     }
     /**
       * Feed The House Apple
