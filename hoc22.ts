@@ -156,6 +156,38 @@ namespace hoc22 {
     }
 
     /**
+     * Teleport to Light Blue Lever
+     */
+    //% block="teleport to light blue lever"
+    export function teleportLightBlueLever(): void {
+        player.teleport(world(13, 71, 71))
+        loops.pause(1000)
+    }
+    /**
+     * Teleport to Magenta Lever
+     */
+    //% block="teleport to magenta lever"
+    export function teleportMagentaLever(): void {
+        player.teleport(world(23, 71, 71))
+        loops.pause(1000)
+    }
+    /**
+     * Teleport to Yellow Lever
+     */
+    //% block="teleport to yellow lever"
+    export function teleportYellowLever(): void {
+        player.teleport(world(11, 71, 71))
+        loops.pause(1000)
+    }
+    /**
+     * Teleport to Orange Lever
+     */
+    //% block="teleport to orange lever"
+    export function teleportOrangeLever(): void {
+        player.teleport(world(21, 71, 71))
+        loops.pause(1000)
+    }
+    /**
       * Feed The House Apple
       */
     //% block="feed house apple"
@@ -189,11 +221,11 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
     /**
-      * Dinner Table Swap Magenta
+      * Dinner Table Swap Green
       */
-    //% block="swap magenta plates"
-    export function dinnerTableSwapMagenta(): void {
-        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+    //% block="swap green plates"
+    export function dinnerTableSwapGreen(): void {
+        blocks.place(Block.GreenConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
     /**
@@ -233,7 +265,7 @@ namespace hoc22 {
       * Mosaic Push Left
       */
     //% block="push blocks left"
-    export function mosaicPushleft(): void {
+    export function mosaicPushLeft(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
