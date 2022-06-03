@@ -225,7 +225,7 @@ namespace hoc22 {
       * Mosaic Push Down
       */
     //% block="push blocks down"
-    export function mosaicPushdown(): void {
+    export function mosaicPushDown(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
@@ -260,6 +260,13 @@ namespace hoc22 {
     //% block="move King %direction"
     export function kingMove(direction: ChessBlockDirection): void {
         moveKingChessInDirection(direction)
+    }
+    /**
+     * Move Queen
+     */
+    //% block="move Queen %direction"
+    export function queenMove(direction: ChessBlockDirection): void {
+        moveQueenChessInDirection(direction)
     }
 
     // helper functions
