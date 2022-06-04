@@ -74,7 +74,7 @@ enum ChessQueenMovementBlock {
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(27, 27, 33)
 const communicationsTimeout = 100
-const teleportTimeout = 1000
+const teleportTimeout = 750
 
 const directions = [
     UP,
