@@ -290,14 +290,14 @@ namespace hoc22 {
     /**
      * Move King
      */
-    //% block="move King %direction"
+    //% block="move king %direction"
     export function kingMove(direction: ChessBlockDirection): void {
         moveKingChessInDirection(direction)
     }
     /**
      * Move Queen
      */
-    //% block="move Queen %direction"
+    //% block="move queen %direction"
     export function queenMove(direction: ChessBlockDirection): void {
         moveQueenChessInDirection(direction)
     }
