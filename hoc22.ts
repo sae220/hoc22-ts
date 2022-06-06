@@ -74,6 +74,7 @@ enum ChessQueenMovementBlock {
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(27, 27, 33)
 const communicationsTimeout = 100
+const chessTimeout = 500
 const teleportTimeout = 750
 
 const directions = [
@@ -249,34 +250,34 @@ namespace hoc22 {
     /**
       * Mosaic Push Up
       */
-    //% block="push blocks up"
+    //% block="push blue (up)"
     export function mosaicPushUp(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(chessTimeout)
     }
     /**
       * Mosaic Push Down
       */
-    //% block="push blocks down"
+    //% block="push red (down)"
     export function mosaicPushDown(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(chessTimeout)
     }
     /**
       * Mosaic Push Left
       */
-    //% block="push blocks left"
+    //% block="push yellow (left)"
     export function mosaicPushLeft(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(chessTimeout)
     }
     /**
       * Mosaic Push right
       */
-    //% block="push blocks right"
+    //% block="push green (right)"
     export function mosaicPushRight(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(chessTimeout)
     }
 
     /**
