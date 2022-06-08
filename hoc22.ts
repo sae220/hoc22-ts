@@ -75,6 +75,7 @@ const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(27, 27, 33)
 const communicationsTimeout = 100
 const chessTimeout = 500
+const plateTimeout = 500
 const teleportTimeout = 750
 
 const directions = [
@@ -220,7 +221,7 @@ namespace hoc22 {
     //% block="swap red side"
     export function dinnerTableSwapRed(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(plateTimeout)
     }
     /**
       * Dinner Table Swap Green
@@ -228,7 +229,7 @@ namespace hoc22 {
     //% block="swap green side"
     export function dinnerTableSwapGreen(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(plateTimeout)
     }
     /**
       * Dinner Table Swap Blue
@@ -236,7 +237,7 @@ namespace hoc22 {
     //% block="swap blue side"
     export function dinnerTableSwapBlue(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(plateTimeout)
     }
     /**
       * Dinner Table Swap Yellow
@@ -244,7 +245,7 @@ namespace hoc22 {
     //% block="swap yellow side"
     export function dinnerTableSwapYellow(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+        loops.pause(plateTimeout)
     }
 
     /**
