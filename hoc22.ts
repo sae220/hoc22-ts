@@ -72,7 +72,7 @@ enum ChessQueenMovementBlock {
 
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
-const weightDropPosition = world(27, 27, 33)
+const weightDropPosition = world(-18, 77, 162)
 const communicationsTimeout = 100
 const chessTimeout = 500
 const plateTimeout = 500
@@ -221,7 +221,7 @@ namespace hoc22 {
     //% block="swap red side"
     export function dinnerTableSwapRed(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(plateTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Dinner Table Swap Green
@@ -229,7 +229,7 @@ namespace hoc22 {
     //% block="swap green side"
     export function dinnerTableSwapGreen(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(plateTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Dinner Table Swap Blue
@@ -237,7 +237,7 @@ namespace hoc22 {
     //% block="swap blue side"
     export function dinnerTableSwapBlue(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(plateTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Dinner Table Swap Yellow
@@ -245,7 +245,7 @@ namespace hoc22 {
     //% block="swap yellow side"
     export function dinnerTableSwapYellow(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(plateTimeout)
+        loops.pause(communicationsTimeout)
     }
 
     /**
@@ -254,7 +254,7 @@ namespace hoc22 {
     //% block="push blue (up)"
     export function mosaicPushUp(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(chessTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Mosaic Push Down
@@ -262,7 +262,7 @@ namespace hoc22 {
     //% block="push red (down)"
     export function mosaicPushDown(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(chessTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Mosaic Push Left
@@ -270,7 +270,7 @@ namespace hoc22 {
     //% block="push yellow (left)"
     export function mosaicPushLeft(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(chessTimeout)
+        loops.pause(communicationsTimeout)
     }
     /**
       * Mosaic Push right
@@ -278,7 +278,7 @@ namespace hoc22 {
     //% block="push green (right)"
     export function mosaicPushRight(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(chessTimeout)
+        loops.pause(communicationsTimeout)
     }
 
     /**
@@ -302,6 +302,91 @@ namespace hoc22 {
     //% block="move queen %direction"
     export function queenMove(direction: ChessBlockDirection): void {
         moveQueenChessInDirection(direction)
+    }
+
+    /**
+      * Potion Room Mixing Puzzle Nether Wart
+      */
+    //% block="add nether wart"
+    export function mixingPuzzleNetherWart(): void {
+        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Potion Room Mixing Puzzle Phantom Membrane
+      */
+    //% block="add phantom membrane"
+    export function mixingPuzzlePhantomMembrane(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Potion Room Mixing Puzzle Spider Eye
+      */
+    //% block="add spider eye"
+    export function mixingPuzzleSpiderEye(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+     * Break Block
+     */
+    //% block="break block"
+    export function breakBlock(): void {
+        placeBlockSignal()
+    }
+
+    /**
+      * Greenhouse Flower Planting Red Flower
+      */
+    //% block="plant red flower"
+    export function flowerPlantingRedFlower(): void {
+        blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    
+    /**
+      * Greenhouse Flower Planting Yellow Flower
+      */
+    //% block="plant yellow flower"
+    export function flowerPlantingYellowFlower(): void {
+        blocks.place(Block.PinkConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Greenhouse Flower Planting Blue Flower
+      */
+    //% block="plant blue flower"
+    export function flowerPlantingBlueFlower(): void {
+        blocks.place(Block.GrayConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+
+    /**
+      * Lab Minecart Sorting Zombie
+      */
+    //% block="sort zombie"
+    export function minecraftSortingZombie(): void {
+        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Lab Minecart Sorting Skeleton
+      */
+    //% block="sort skeleton"
+    export function minecraftSortingSkeleton(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
+    }
+    /**
+      * Lab Minecart Sorting Creeper
+      */
+    //% block="sort creeper"
+    export function minecraftSortingCreeper(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+        loops.pause(communicationsTimeout)
     }
 
     // helper functions
