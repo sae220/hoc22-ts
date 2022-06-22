@@ -389,7 +389,7 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
 
-    //% block="`Custom.PhantomMembrane`"
+    //% block="`Item.SpiderEye`"
     export function phantomMembrane(): void{}
 
     // helper functions
