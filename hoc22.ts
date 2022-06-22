@@ -70,6 +70,12 @@ enum ChessQueenMovementBlock {
     Invalid = Block.Bedrock
 }
 
+enum Custom {
+    //% blockIdentity="blocks.custom" enumval=999 block="Phantom Membrane"
+    //% jres alias=PHANTOM_MEMBRANE
+    PhantomMembrane = 999
+}
+
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(-18, 77, 162)
@@ -389,7 +395,7 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
 
-    //% block="`Item.SpiderEye`"
+    //% block="`Custom.PhantomMembrane`"
     export function phantomMembrane(): void{}
 
     // helper functions
