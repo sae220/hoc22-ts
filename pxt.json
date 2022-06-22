@@ -8,7 +8,8 @@
     "files": [
         "README.md",
         "hoc22.ts",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "custom.jres"
     ],
     "targetVersions": {
         "target": "1.6.13",

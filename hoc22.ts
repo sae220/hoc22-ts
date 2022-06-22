@@ -389,6 +389,9 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
 
+    //% block="`Custom.PhantomMembrane`"
+    export function phantomMembrane(): void{}
+
     // helper functions
     function resetSignal(): void {
         blocks.place(Block.WhiteConcrete, placeBlockMechanicsCommunicationPos)

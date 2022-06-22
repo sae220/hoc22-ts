@@ -1,0 +1,9 @@
+{
+    "*": {
+        "namespace": "Custom",
+        "dataEncoding": "base64"
+    },
+    "PhantomMembrane": {
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADMSURBVDhPzVIxCgJBDLwv+gVrRbBTQUEL4RA7K20sfYKd4CsE/7LexJswyek1Ni4MbLKZmSR3VfUXp5TSi/V4WojlcBHePgqw+HLc2v1+PZfn42ZQsQZdARKATN6v5h7jPhmM3i1kMgmnemOFTSeB3CugBSQBjNs9GIIA3dVNHZFnfNjNjIyFBoHsqqMomQK+RJ1dnRh/az8IcG4QFLkjdQ8C2j6d81fJAr4DJJQMYiZzdm3f/0QoIZmL2kKHkjsCFBGiFWlO80Hgl/MCwFABESupg9oAAAAASUVORK5CYII="
+    }
+}
