@@ -76,7 +76,28 @@ enum Custom {
     PhantomMembrane = 999,
     //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = 998
+    ArrowUpOrange = 998,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
+    ArrowDownMagenta = 997,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
+    ArrowLeftBlue = 996,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
+    ArrowRightYellow = 995,
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Magenta"
+    //% jres alias=ARROW_UP_MAGENTA
+    ArrowUpMagenta = 994,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Orange"
+    //% jres alias=ARROW_DOWN_ORANGE
+    ArrowDownOrange = 993,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Yellow"
+    //% jres alias=ARROW_LEFT_YELLOW
+    ArrowLeftYellow = 992,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Blue"
+    //% jres alias=ARROW_RIGHT_BLUE
+    ArrowRightBlue = 991
 }
 
 // global variables
@@ -305,6 +326,77 @@ namespace hoc22 {
     export function cursorMoveUpOrange(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Down Magenta
+     */
+    //% block="move cursor `Custom.ArrowDownMagenta` by %n "
+    export function cursorMoveDownMagenta(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Left Blue
+     */
+    //% block="move cursor `Custom.ArrowLeftBlue` by %n "
+    export function cursorMoveLeftBlue(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Right Yellow
+     */
+    //% block="move cursor `Custom.ArrowRightYellow` by %n "
+    export function cursorMoveRightYellow(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Cursor Move Up Magenta
+     */
+    //% block="move cursor `Custom.ArrowUpMagenta` by %n "
+    export function cursorMoveUpMagenta(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Down Orange
+     */
+    //% block="move cursor `Custom.ArrowDownOrange` by %n "
+    export function cursorMoveDownOrange(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Left Yellow
+     */
+    //% block="move cursor `Custom.ArrowLeftYellow` by %n "
+    export function cursorMoveLeftYellow(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Right Blue
+     */
+    //% block="move cursor `Custom.ArrowRightBlue` by %n "
+    export function cursorMoveRightBlue(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
