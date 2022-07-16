@@ -278,7 +278,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Red
       */
-    //% block="swap red side"
+    //% block="swap `Block.RedCarpet` side"
     export function dinnerTableSwapRed(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -286,7 +286,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Green
       */
-    //% block="swap green side"
+    //% block="swap `Block.LimeCarpet` side"
     export function dinnerTableSwapGreen(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -294,7 +294,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Blue
       */
-    //% block="swap blue side"
+    //% block="swap `Block.BlueCarpet` side"
     export function dinnerTableSwapBlue(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -302,7 +302,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Yellow
       */
-    //% block="swap yellow side"
+    //% block="swap `Block.YellowCarpet` side"
     export function dinnerTableSwapYellow(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
