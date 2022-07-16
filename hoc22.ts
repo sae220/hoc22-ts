@@ -86,44 +86,46 @@ enum Custom {
     //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
     //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = 995,
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Magenta"
+    //% blockIdentity="blocks.custom" enumval=994 block="Arrow Up Magenta"
     //% jres alias=ARROW_UP_MAGENTA
     ArrowUpMagenta = 994,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Orange"
+    //% blockIdentity="blocks.custom" enumval=993 block="Arrow Down Orange"
     //% jres alias=ARROW_DOWN_ORANGE
     ArrowDownOrange = 993,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Yellow"
+    //% blockIdentity="blocks.custom" enumval=992 block="Arrow Left Yellow"
     //% jres alias=ARROW_LEFT_YELLOW
     ArrowLeftYellow = 992,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Blue"
+    //% blockIdentity="blocks.custom" enumval=991 block="Arrow Right Blue"
     //% jres alias=ARROW_RIGHT_BLUE
     ArrowRightBlue = 991
 }
 
 enum CursorOrientationOne {
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% blockIdentity="blocks.custom" enumval=899 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = 899,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% blockIdentity="blocks.custom" enumval=898 block="Arrow Down Magenta"
     //% jres alias=ARROW_DOWN_MAGENTA
     ArrowDownMagenta = 898,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% blockIdentity="blocks.custom" enumval=897 block="Arrow Left Blue"
     //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = 897,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% blockIdentity="blocks.custom" enumval=896 block="Arrow Right Yellow"
     //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = 896
 }
 
 enum CursorOrientationTwo {
+    //% blockIdentity="blocks.custom" enumval=799 block="Arrow Up Magenta"
+    //% jres alias=ARROW_UP_ORANGE
     ArrowUpMagenta = 799,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Orange"
+    //% blockIdentity="blocks.custom" enumval=798 block="Arrow Down Orange"
     //% jres alias=ARROW_DOWN_ORANGE
     ArrowDownOrange = 798,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Yellow"
+    //% blockIdentity="blocks.custom" enumval=797 block="Arrow Left Yellow"
     //% jres alias=ARROW_LEFT_YELLOW
     ArrowLeftYellow = 797,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Blue"
+    //% blockIdentity="blocks.custom" enumval=796 block="Arrow Right Blue"
     //% jres alias=ARROW_RIGHT_BLUE
     ArrowRightBlue = 796
 }
