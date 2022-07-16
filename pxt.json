@@ -11,9 +11,7 @@
         "tutorial-info-cache.json",
         "custom.jres",
         "CursorOrientationOne.jres",
-        "CursorOrientationTwo.jres",
-        "WeightedMobs.jres",
-        "ColoredBlocks.jres"
+        "CursorOrientationTwo.jres"
     ],
     "targetVersions": {
         "target": "1.7.1",

@@ -209,7 +209,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `WeightedMobs.WeightedChicken` weight"
+    //% block="summon `Custom.WeightedChicken` weight"
     export function summonWeightChicken(): void {
         mobs.spawn(Weight.CHICKEN, weightDropPosition);
         loops.pause(communicationsTimeout)
@@ -217,7 +217,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `WeightedMobs.WeightedCow` weight"
+    //% block="summon `Custom.WeightedCow` weight"
     export function summonWeightCow(): void {
         mobs.spawn(Weight.COW, weightDropPosition);
         loops.pause(communicationsTimeout)
@@ -225,7 +225,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `WeightedMobs.WeightedSheep` weight"
+    //% block="summon `Custom.WeightedSheep` weight"
     export function summonWeightSheep(): void {
         mobs.spawn(Weight.SHEEP, weightDropPosition);
         loops.pause(communicationsTimeout)
