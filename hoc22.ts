@@ -97,7 +97,19 @@ enum Custom {
     ArrowLeftYellow = 992,
     //% blockIdentity="blocks.custom" enumval=991 block="Arrow Right Blue"
     //% jres alias=ARROW_RIGHT_BLUE
-    ArrowRightBlue = 991
+    ArrowRightBlue = 991,
+    //% blockIdentity="blocks.custom" enumval=990 block="Harvest Wheat"
+    //% jres alias=BREAD_BAKE_ONE
+    BreadBakeOne = 990,
+    //% blockIdentity="blocks.custom" enumval=989 block="Mill Wheat"
+    //% jres alias=BREAD_BAKE_TWO
+    BreadBakeTwo = 989,
+    //% blockIdentity="blocks.custom" enumval=987 block="Make Dough"
+    //% jres alias=BREAD_BAKE_THREE
+    BreadBakeThree = 987,
+    //% blockIdentity="blocks.custom" enumval=986 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    BreadBakeFour = 986
 }
 
 enum CursorOrientationOne {
@@ -188,7 +200,7 @@ namespace hoc22 {
     /**
      * Baking Bread Harvest Wheat
      */
-    //% block="harvest wheat"
+    //% block="harvest wheat `Custom.BreadBakeOne`"
     export function bakingBreadWheat(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -196,7 +208,7 @@ namespace hoc22 {
     /**
      * Baking Bread Mill Wheat
      */
-    //% block="mill wheat"
+    //% block="mill wheat  `Custom.BreadBakeTwo`"
     export function bakingBreadGrain(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -204,7 +216,7 @@ namespace hoc22 {
     /**
      * Baking Bread Make Dough
      */
-    //% block="make dough"
+    //% block="make dough `Custom.BreadBakeThree`"
     export function bakingBreadDough(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -212,7 +224,7 @@ namespace hoc22 {
     /**
      * Baking Bread Bake Into Bread
      */
-    //% block="bake into bread"
+    //% block="bake into bread `Custom.BreadBakeFour`"
     export function bakingBreadBread(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
