@@ -73,7 +73,10 @@ enum ChessQueenMovementBlock {
 enum Custom {
     //% blockIdentity="blocks.custom" enumval=999 block="Phantom Membrane"
     //% jres alias=PHANTOM_MEMBRANE
-    PhantomMembrane = 999
+    PhantomMembrane = 999,
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
+    ArrowUpOrange = 998
 }
 
 // global variables
@@ -293,6 +296,17 @@ namespace hoc22 {
     //% block="cursor move %direction"
     export function cursorMove(direction: ColoredBlockDirection): void {
         moveCursorInDirection(direction)
+    }
+
+    /**
+     * Cursor Move Up Orange
+     */
+    //% block="move cursor `Custom.PhantomMembrane` by %n "
+    export function cursorMoveUpOrange(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
