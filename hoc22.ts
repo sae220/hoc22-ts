@@ -515,7 +515,7 @@ namespace hoc22 {
     /**
       * Potion Room Mixing Puzzle Nether Wart
       */
-    //% block="add nether wart"
+    //% block="add `Item.NetherWart`"
     export function mixingPuzzleNetherWart(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -523,7 +523,7 @@ namespace hoc22 {
     /**
       * Potion Room Mixing Puzzle Phantom Membrane
       */
-    //% block="add phantom membrane"
+    //% block="add `Custom.PhantomMembrane`"
     export function mixingPuzzlePhantomMembrane(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -531,7 +531,7 @@ namespace hoc22 {
     /**
       * Potion Room Mixing Puzzle Spider Eye
       */
-    //% block="add spider eye"
+    //% block="add `Item.FermentedSpiderEye`"
     export function mixingPuzzleSpiderEye(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
