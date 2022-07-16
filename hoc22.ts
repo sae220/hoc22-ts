@@ -155,21 +155,6 @@ enum WeightedMobs {
     WeightedChicken = 697
 }
 
-enum ColoredBlocks {
-    //% blockIdentity="blocks.custom" enumval=699 block="Magenta Block"
-    //% jres alias=MAGENTA_CONCRETE
-    MagentaConcrete = 599,
-    //% blockIdentity="blocks.custom" enumval=698 block="Light Blue Block"
-    //% jres alias=LIGHT_BLUE_CONCRETE
-    LightBlueConcrete = 598,
-    //% blockIdentity="blocks.custom" enumval=697 block="Yellow Block"
-    //% jres alias=YELLOW_CONCRETE
-    YellowConcrete = 597,
-    //% blockIdentity="blocks.custom" enumval=697 block="Lime Block"
-    //% jres alias=LIME_CONCRETE
-    LimeConcrete = 596
-}
-
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(-18, 77, 162)
@@ -191,41 +176,59 @@ namespace hoc22 {
     /**
      * Summon colored blocks (POC1-a)
      */
-    //% block="drop %b block"
-    export function summonColoredBlock(b: ColoredBlocks): void {
-        switch (b) {
-            case ColoredBlocks.MagentaConcrete:
-                blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
-                break;
-            case ColoredBlocks.LightBlueConcrete:
-                blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
-                break;
-            case ColoredBlocks.YellowConcrete:
-                blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
-                break;
-            case ColoredBlocks.LimeConcrete:
-                blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
-                break;
-        }
+    //% block="drop `Block.MagentaConcrete` block"
+    export function summonColoredBlockMagenta(): void {
+        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
+        loops.pause(communicationsTimeout)
     }
-
+    /**
+     * Summon colored blocks (POC1-a)
+     */
+    //% block="drop `Block.LightBlueConcrete` block"
+    export function summonColoredBlockLightBlue(): void {
+        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Summon colored blocks (POC1-a)
+     */
+    //% block="drop `Block.YellowConcrete` block"
+    export function summonColoredBlockYellow(): void {
+        blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Summon colored blocks (POC1-a)
+     */
+    //% block="drop `Block.LimeConcrete` block"
+    export function summonColoredBlockLime(): void {
+        blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
+        loops.pause(communicationsTimeout)
+    }
 
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon %w weight"
-    export function summonWeight(w: WeightedMobs): void {
-        switch (w) {
-            case WeightedMobs.WeightedChicken:
-                mobs.spawn(Weight.CHICKEN, weightDropPosition);
-                break;
-            case WeightedMobs.WeightedCow:
-                mobs.spawn(Weight.COW, weightDropPosition);
-                break;
-            case WeightedMobs.WeightedSheep:
-                mobs.spawn(Weight.SHEEP, weightDropPosition);
-                break;
-        }
+    //% block="summon `WeightedMobs.WeightedChicken` weight"
+    export function summonWeightChicken(): void {
+        mobs.spawn(Weight.CHICKEN, weightDropPosition);
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Summon weight (POC1-b)
+     */
+    //% block="summon `WeightedMobs.WeightedCow` weight"
+    export function summonWeightCow(): void {
+        mobs.spawn(Weight.COW, weightDropPosition);
+        loops.pause(communicationsTimeout)
+    }
+    /**
+     * Summon weight (POC1-b)
+     */
+    //% block="summon `WeightedMobs.WeightedSheep` weight"
+    export function summonWeightSheep(): void {
+        mobs.spawn(Weight.SHEEP, weightDropPosition);
+        loops.pause(communicationsTimeout)
     }
 
     /**
