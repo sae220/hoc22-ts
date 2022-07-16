@@ -53,65 +53,6 @@ enum ChessQueenMovementBlock {
     Invalid = Block.Bedrock
 }
 
-enum Custom {
-    //% blockIdentity="blocks.custom" enumval=999 block="Phantom Membrane"
-    //% jres alias=PHANTOM_MEMBRANE
-    PhantomMembrane = 999,
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
-    //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = 998,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
-    //% jres alias=ARROW_DOWN_MAGENTA
-    ArrowDownMagenta = 997,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
-    //% jres alias=ARROW_LEFT_BLUE
-    ArrowLeftBlue = 996,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
-    //% jres alias=ARROW_RIGHT_YELLOW
-    ArrowRightYellow = 995,
-    //% blockIdentity="blocks.custom" enumval=994 block="Arrow Up Magenta"
-    //% jres alias=ARROW_UP_MAGENTA
-    ArrowUpMagenta = 994,
-    //% blockIdentity="blocks.custom" enumval=993 block="Arrow Down Orange"
-    //% jres alias=ARROW_DOWN_ORANGE
-    ArrowDownOrange = 993,
-    //% blockIdentity="blocks.custom" enumval=992 block="Arrow Left Yellow"
-    //% jres alias=ARROW_LEFT_YELLOW
-    ArrowLeftYellow = 992,
-    //% blockIdentity="blocks.custom" enumval=991 block="Arrow Right Blue"
-    //% jres alias=ARROW_RIGHT_BLUE
-    ArrowRightBlue = 991,
-    //% blockIdentity="blocks.custom" enumval=990 block="Harvest Wheat"
-    //% jres alias=BREAD_BAKE_ONE
-    BreadBakeOne = 990,
-    //% blockIdentity="blocks.custom" enumval=989 block="Mill Wheat"
-    //% jres alias=BREAD_BAKE_TWO
-    BreadBakeTwo = 989,
-    //% blockIdentity="blocks.custom" enumval=987 block="Make Dough"
-    //% jres alias=BREAD_BAKE_THREE
-    BreadBakeThree = 987,
-    //% blockIdentity="blocks.custom" enumval=986 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    BreadBakeFour = 986,
-    //% blockIdentity="blocks.custom" enumval=985 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessQueen = 985,
-    //% blockIdentity="blocks.custom" enumval=984 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessKing = 984,
-    //% blockIdentity="blocks.custom" enumval=983 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessDownRed = 983,
-    //% blockIdentity="blocks.custom" enumval=982 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessUpBlue = 982,
-    //% blockIdentity="blocks.custom" enumval=981 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessLeftYellow = 981,
-    //% blockIdentity="blocks.custom" enumval=980 block="Bake Into Bread"
-    //% jres alias=BREAD_BAKE_FOUR
-    ChessRightGreen = 980
-}
 
 
 
