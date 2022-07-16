@@ -175,7 +175,7 @@ const directions = [
     RIGHT
 ];
 
-//%  block="Hour of Code 2022" weight=200 color=#ffffff icon="\u26EB"
+//%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
 namespace hoc22 {
 
     /**
