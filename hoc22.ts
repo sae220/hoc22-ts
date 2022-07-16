@@ -143,17 +143,7 @@ enum CursorOrientationTwo {
     ArrowRightBlue = 796
 }
 
-enum WeightedMobs {
-    //% blockIdentity="blocks.custom" enumval=699 block="Sheep Weight"
-    //% jres alias=WEIGHTED_SHEEP
-    WeightedSheep = 699,
-    //% blockIdentity="blocks.custom" enumval=698 block="Cow Weight"
-    //% jres alias=WEIGHTED_COW
-    WeightedCow = 698,
-    //% blockIdentity="blocks.custom" enumval=697 block="Chicken Weight"
-    //% jres alias=WEIGHTED_CHICKEN
-    WeightedChicken = 697
-}
+
 
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
