@@ -253,7 +253,7 @@ namespace hoc22 {
     /**
       * Feed The House Apple
       */
-    //% block="feed house apple"
+    //% block="feed house `Item.Apple`"
     export function feedHouseApple(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -261,7 +261,7 @@ namespace hoc22 {
     /**
       * Feed The House Salmon
       */
-    //% block="feed house salmon"
+    //% block="feed house `Item.RawSalmon`"
     export function feedHouseSalmon(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -269,7 +269,7 @@ namespace hoc22 {
     /**
       * Feed The House Mushroom Stew
       */
-    //% block="feed house mushroom strew"
+    //% block="feed house `Item.MushroomStew`"
     export function feedHouseMushroomStew(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
