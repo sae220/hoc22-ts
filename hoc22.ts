@@ -109,7 +109,25 @@ enum Custom {
     BreadBakeThree = 987,
     //% blockIdentity="blocks.custom" enumval=986 block="Bake Into Bread"
     //% jres alias=BREAD_BAKE_FOUR
-    BreadBakeFour = 986
+    BreadBakeFour = 986,
+    //% blockIdentity="blocks.custom" enumval=985 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessQueen = 985,
+    //% blockIdentity="blocks.custom" enumval=984 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessKing = 984,
+    //% blockIdentity="blocks.custom" enumval=983 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessDownRed = 983,
+    //% blockIdentity="blocks.custom" enumval=982 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessUpBlue = 982,
+    //% blockIdentity="blocks.custom" enumval=981 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessLeftYellow = 981,
+    //% blockIdentity="blocks.custom" enumval=980 block="Bake Into Bread"
+    //% jres alias=BREAD_BAKE_FOUR
+    ChessRightGreen = 980
 }
 
 enum CursorOrientationOne {
@@ -323,7 +341,7 @@ namespace hoc22 {
     /**
       * Mosaic Push Up
       */
-    //% block="push blue (up)"
+    //% block="push `Custom.ChessUpBlue`"
     export function mosaicPushUp(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -331,7 +349,7 @@ namespace hoc22 {
     /**
       * Mosaic Push Down
       */
-    //% block="push red (down)"
+    //% block="push `Custom.ChessDownRed`"
     export function mosaicPushDown(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -339,7 +357,7 @@ namespace hoc22 {
     /**
       * Mosaic Push Left
       */
-    //% block="push yellow (left)"
+    //% block="push `Custom.ChessLeftYellow`"
     export function mosaicPushLeft(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -347,7 +365,7 @@ namespace hoc22 {
     /**
       * Mosaic Push right
       */
-    //% block="push green (right)"
+    //% block="push 1Custom.ChessRightGreen"
     export function mosaicPushRight(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -500,14 +518,14 @@ namespace hoc22 {
     /**
      * Move King
      */
-    //% block="move king %direction"
+    //% block="move `Custom.ChessKing` %direction"
     export function kingMove(direction: ChessBlockDirection): void {
         moveKingChessInDirection(direction)
     }
     /**
      * Move Queen
      */
-    //% block="move queen %direction"
+    //% block="move `Custom.ChessQueen` %direction"
     export function queenMove(direction: ChessBlockDirection): void {
         moveQueenChessInDirection(direction)
     }
