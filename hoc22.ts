@@ -301,7 +301,7 @@ namespace hoc22 {
     /**
      * Cursor Move Up Orange
      */
-    //% block="move cursor `Custom.PhantomMembrane` by %n "
+    //% block="move cursor `Custom.ArrowUpOrange` by %n "
     export function cursorMoveUpOrange(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
