@@ -1,6 +1,6 @@
 {
     "name": "minecraft-hoc22",
-    "version": "0.2.50",
+    "version": "0.2.51",
     "dependencies": {
         "core": "*",
         "builder": "*"
