@@ -548,7 +548,7 @@ namespace hoc22 {
     /**
       * Greenhouse Flower Planting Red Flower
       */
-    //% block="plant red flower"
+    //% block="plant `Block.Poppy`"
     export function flowerPlantingRedFlower(): void {
         blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -558,7 +558,7 @@ namespace hoc22 {
     /**
       * Greenhouse Flower Planting Yellow Flower
       */
-    //% block="plant yellow flower"
+    //% block="plant `Block.YellowFlower`"
     export function flowerPlantingYellowFlower(): void {
         blocks.place(Block.PinkConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -566,7 +566,7 @@ namespace hoc22 {
     /**
       * Greenhouse Flower Planting Blue Flower
       */
-    //% block="plant blue flower"
+    //% block="plant `Block.BlueOrchid`"
     export function flowerPlantingBlueFlower(): void {
         blocks.place(Block.GrayConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -575,7 +575,7 @@ namespace hoc22 {
     /**
       * Lab Minecart Sorting Zombie
       */
-    //% block="sort zombie"
+    //% block="sort `Custom.ZombieFace`"
     export function minecraftSortingZombie(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -583,7 +583,7 @@ namespace hoc22 {
     /**
       * Lab Minecart Sorting Skeleton
       */
-    //% block="sort skeleton"
+    //% block="sort `Custom.SkeletonFace`"
     export function minecraftSortingSkeleton(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -591,7 +591,7 @@ namespace hoc22 {
     /**
       * Lab Minecart Sorting Creeper
       */
-    //% block="sort creeper"
+    //% block="sort `Custom.CreeperFace`"
     export function minecraftSortingCreeper(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
