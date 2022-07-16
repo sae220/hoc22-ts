@@ -455,29 +455,44 @@ namespace hoc22 {
     /**
      * Cursor Move Orientation two
      */
-    //% block="cursor move %direction by %n"
-    export function cursorMoveOrientationTwo(direction: CursorOrientationTwo, n: number): void {
-        let block = Block.WhiteConcrete
-        switch (direction) {
-            case CursorOrientationTwo.ArrowUpMagenta:
-                block = Block.OrangeConcrete
-                break;
-            case CursorOrientationTwo.ArrowDownOrange:
-                block = Block.MagentaConcrete
-                break;
-            case CursorOrientationTwo.ArrowLeftYellow:
-                block = Block.LightBlueConcrete
-                break;
-            case CursorOrientationTwo.ArrowRightBlue:
-                block = Block.YellowConcrete
-                break;
-        }
-
+    //% block="cursor move `Custom.ArrowUpMagenta` by %n"
+    export function cursorMoveOrientationTwoUp(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
+    /**
+     * Cursor Move Orientation two
+     */
+    //% block="cursor move `Custom.ArrowDownOrange` by %n"
+    export function cursorMoveOrientationTwoDown(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Orientation two
+     */
+    //% block="cursor move `Custom.ArrowLeftYellow` by %n"
+    export function cursorMoveOrientationTwoLeft(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+    /**
+     * Cursor Move Orientation two
+     */
+    //% block="cursor move `Custom.ArrowRightBlue` by %n"
+    export function cursorMoveOrientationTwoRight(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
 
     /**
      * Cursor Move Up Orange
