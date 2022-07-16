@@ -9,7 +9,9 @@
         "README.md",
         "hoc22.ts",
         "tutorial-info-cache.json",
-        "custom.jres"
+        "custom.jres",
+        "CursorOrientationOne.jres",
+        "CursorOrientationTwo.jres"
     ],
     "targetVersions": {
         "target": "1.7.1",

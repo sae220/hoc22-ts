@@ -100,6 +100,34 @@ enum Custom {
     ArrowRightBlue = 991
 }
 
+enum CursorOrientationOne {
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
+    ArrowUpOrange = 899,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
+    ArrowDownMagenta = 898,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
+    ArrowLeftBlue = 897,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
+    ArrowRightYellow = 896
+}
+
+enum CursorOrientationTwo {
+    ArrowUpMagenta = 799,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Orange"
+    //% jres alias=ARROW_DOWN_ORANGE
+    ArrowDownOrange = 798,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Yellow"
+    //% jres alias=ARROW_LEFT_YELLOW
+    ArrowLeftYellow = 797,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Blue"
+    //% jres alias=ARROW_RIGHT_BLUE
+    ArrowRightBlue = 796
+}
+
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(-18, 77, 162)
@@ -317,6 +345,33 @@ namespace hoc22 {
     //% block="cursor move %direction"
     export function cursorMove(direction: ColoredBlockDirection): void {
         moveCursorInDirection(direction)
+    }
+
+    /**
+     * Cursor Move Orientation One
+     */
+    //% block="cursor move %direction by %n"
+    export function cursorMoveOrientationOne(direction: CursorOrientationOne, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case CursorOrientationOne.ArrowUpOrange:
+                block = Block.OrangeConcrete
+                break;
+            case CursorOrientationOne.ArrowDownMagenta:
+                block = Block.MagentaConcrete
+                break;
+            case CursorOrientationOne.ArrowLeftBlue:
+                block = Block.LightBlueConcrete
+                break;
+            case CursorOrientationOne.ArrowRightYellow:
+                block = Block.YellowConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++){
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
