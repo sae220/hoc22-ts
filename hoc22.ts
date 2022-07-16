@@ -5,23 +5,6 @@ enum Weight {
     SHEEP = 13
 }
 
-
-enum ColoredBlocks {
-    //% blockIdentity="blocks.block" enumval=262380 block="yellow block"
-    //% jres alias=YELLOW_CONCRETE
-    YellowConcrete = 262380,
-    //% blockIdentity="blocks.block" enumval=131308 block="magenta block"
-    //% jres alias=MAGENTA_CONCRETE
-    MagentaConcrete = 131308,
-    //% blockIdentity="blocks.block" enumval=196844 block="light blue block"
-    //% jres alias=LIGHT_BLUE_CONCRETE
-    LightBlueConcrete = 196844,
-    //% blockIdentity="blocks.block" enumval=327916 block="lime block"
-    //% jres alias=LIME_CONCRETE
-    LimeConcrete = 327916
-
-}
-
 enum ColoredBlockDirection {
     //% block=left alias=LEFT
     Left,
@@ -172,6 +155,21 @@ enum WeightedMobs {
     WeightedChicken = 697
 }
 
+enum ColoredBlocks {
+    //% blockIdentity="blocks.custom" enumval=699 block="Magenta Block"
+    //% jres alias=MAGENTA_CONCRETE
+    MagentaConcrete = 599,
+    //% blockIdentity="blocks.custom" enumval=698 block="Light Blue Block"
+    //% jres alias=LIGHT_BLUE_CONCRETE
+    LightBlueConcrete = 598,
+    //% blockIdentity="blocks.custom" enumval=697 block="Yellow Block"
+    //% jres alias=YELLOW_CONCRETE
+    YellowConcrete = 597,
+    //% blockIdentity="blocks.custom" enumval=697 block="Lime Block"
+    //% jres alias=LIME_CONCRETE
+    LimeConcrete = 596
+}
+
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(-18, 77, 162)
@@ -195,9 +193,20 @@ namespace hoc22 {
      */
     //% block="drop %b block"
     export function summonColoredBlock(b: ColoredBlocks): void {
-
-        blocks.place(b, placeBlockMechanicsCommunicationPos);
-
+        switch (b) {
+            case ColoredBlocks.MagentaConcrete:
+                blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
+                break;
+            case ColoredBlocks.LightBlueConcrete:
+                blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
+                break;
+            case ColoredBlocks.YellowConcrete:
+                blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
+                break;
+            case ColoredBlocks.LimeConcrete:
+                blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
+                break;
+        }
     }
 
 
@@ -215,7 +224,7 @@ namespace hoc22 {
                 break;
             case WeightedMobs.WeightedSheep:
                 mobs.spawn(Weight.SHEEP, weightDropPosition);
-                break
+                break;
         }
     }
 

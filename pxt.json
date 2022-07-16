@@ -12,7 +12,8 @@
         "custom.jres",
         "CursorOrientationOne.jres",
         "CursorOrientationTwo.jres",
-        "WeightedMobs.jres"
+        "WeightedMobs.jres",
+        "ColoredBlocks.jres"
     ],
     "targetVersions": {
         "target": "1.7.1",
