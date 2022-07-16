@@ -160,6 +160,18 @@ enum CursorOrientationTwo {
     ArrowRightBlue = 796
 }
 
+enum WeightedMobs {
+    //% blockIdentity="blocks.custom" enumval=699 block="Sheep Weight"
+    //% jres alias=WEIGHTED_SHEEP
+    WeightedSheep = 699,
+    //% blockIdentity="blocks.custom" enumval=698 block="Cow Weight"
+    //% jres alias=WEIGHTED_COW
+    WeightedCow = 698,
+    //% blockIdentity="blocks.custom" enumval=697 block="Chicken Weight"
+    //% jres alias=WEIGHTED_CHICKEN
+    WeightedChicken = 697
+}
+
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
 const weightDropPosition = world(-18, 77, 162)
@@ -193,10 +205,18 @@ namespace hoc22 {
      * Summon weight (POC1-b)
      */
     //% block="summon %w weight"
-    export function summonWeight(w: Weight): void {
-
-        mobs.spawn(w, weightDropPosition);
-
+    export function summonWeight(w: WeightedMobs): void {
+        switch (w) {
+            case WeightedMobs.WeightedChicken:
+                mobs.spawn(Weight.CHICKEN, weightDropPosition);
+                break;
+            case WeightedMobs.WeightedCow:
+                mobs.spawn(Weight.COW, weightDropPosition);
+                break;
+            case WeightedMobs.WeightedSheep:
+                mobs.spawn(Weight.SHEEP, weightDropPosition);
+                break
+        }
     }
 
     /**
