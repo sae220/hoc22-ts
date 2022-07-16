@@ -365,7 +365,7 @@ namespace hoc22 {
     /**
       * Mosaic Push right
       */
-    //% block="push Custom.ChessRightGreen"
+    //% block="push `Custom.ChessRightGreen`"
     export function mosaicPushRight(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
