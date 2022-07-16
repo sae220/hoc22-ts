@@ -152,7 +152,7 @@ namespace hoc22 {
     /**
      * Toggle Redstone Lamp
      */
-    //% block="place `Block.RedstoneLamp`"
+    //% block="toggle `Block.RedstoneLamp`"
     export function toggleLight(): void {
         placeBlockSignal()
         loops.pause(communicationsTimeout)
