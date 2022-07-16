@@ -375,6 +375,33 @@ namespace hoc22 {
     }
 
     /**
+     * Cursor Move Orientation two
+     */
+    //% block="cursor move %direction by %n"
+    export function cursorMoveOrientationTwo(direction: CursorOrientationTwo, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case CursorOrientationTwo.ArrowUpMagenta:
+                block = Block.OrangeConcrete
+                break;
+            case CursorOrientationTwo.ArrowDownOrange:
+                block = Block.MagentaConcrete
+                break;
+            case CursorOrientationTwo.ArrowLeftYellow:
+                block = Block.LightBlueConcrete
+                break;
+            case CursorOrientationTwo.ArrowRightBlue:
+                block = Block.YellowConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++) {
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
      * Cursor Move Up Orange
      */
     //% block="move cursor `Custom.ArrowUpOrange` by %n "
