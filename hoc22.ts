@@ -7,16 +7,16 @@ enum Weight {
 
 
 enum ColoredBlocks {
-    //% blockIdentity="blocks.block" enumval=262380 block="yellow"
+    //% blockIdentity="blocks.block" enumval=262380 block="yellow block"
     //% jres alias=YELLOW_CONCRETE
     YellowConcrete = 262380,
-    //% blockIdentity="blocks.block" enumval=131308 block="magenta"
+    //% blockIdentity="blocks.block" enumval=131308 block="magenta block"
     //% jres alias=MAGENTA_CONCRETE
     MagentaConcrete = 131308,
-    //% blockIdentity="blocks.block" enumval=196844 block="light blue"
+    //% blockIdentity="blocks.block" enumval=196844 block="light blue block"
     //% jres alias=LIGHT_BLUE_CONCRETE
     LightBlueConcrete = 196844,
-    //% blockIdentity="blocks.block" enumval=327916 block="lime"
+    //% blockIdentity="blocks.block" enumval=327916 block="lime block"
     //% jres alias=LIME_CONCRETE
     LimeConcrete = 327916
 
