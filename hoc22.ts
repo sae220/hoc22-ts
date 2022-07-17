@@ -575,26 +575,32 @@ namespace hoc22 {
     /**
       * Lab Minecart Sorting Zombie
       */
-    //% block="sort `Custom.ZombieFace`"
-    export function minecraftSortingZombie(): void {
-        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    //% block="sort %n `Custom.ZombieFace`"
+    export function minecraftSortingZombie(n: number): void {
+        for (let i = 0; i < n; i++){
+            blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
       * Lab Minecart Sorting Skeleton
       */
-    //% block="sort `Custom.SkeletonFace`"
-    export function minecraftSortingSkeleton(): void {
-        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    //% block="sort %n `Custom.SkeletonFace`"
+    export function minecraftSortingSkeleton(n: number): void {
+        for (let i = 0; i < n; i++){
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
       * Lab Minecart Sorting Creeper
       */
-    //% block="sort `Custom.CreeperFace`"
-    export function minecraftSortingCreeper(): void {
-        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    //% block="sort %n `Custom.CreeperFace`"
+    export function minecraftSortingCreeper(n: number): void {
+        for (let i = 0; i < n; i++){
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
 
     //% block="`Custom.PhantomMembrane`"
