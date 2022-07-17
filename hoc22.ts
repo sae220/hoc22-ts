@@ -36,7 +36,7 @@ namespace hoc22 {
     /**
      * Summon colored blocks (POC1-a)
      */
-    //% block="drop `Block.MagentaConcrete` block"
+    //% block="drop %n `Block.MagentaConcrete`"
     export function summonColoredBlockMagenta(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
@@ -46,7 +46,7 @@ namespace hoc22 {
     /**
      * Summon colored blocks (POC1-a)
      */
-    //% block="drop `Block.LightBlueConcrete` block"
+    //% block="drop %n `Block.LightBlueConcrete`"
     export function summonColoredBlockLightBlue(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
@@ -56,7 +56,7 @@ namespace hoc22 {
     /**
      * Summon colored blocks (POC1-a)
      */
-    //% block="drop `Block.YellowConcrete` block"
+    //% block="drop %n `Block.YellowConcrete`"
     export function summonColoredBlockYellow(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
@@ -66,7 +66,7 @@ namespace hoc22 {
     /**
      * Summon colored blocks (POC1-a)
      */
-    //% block="drop `Block.LimeConcrete` block"
+    //% block="drop %n `Block.LimeConcrete`"
     export function summonColoredBlockLime(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
@@ -77,7 +77,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `Custom.WeightedChicken` weight"
+    //% block="summon %n `Custom.WeightedChicken`"
     export function summonWeightChicken(n: number): void {
         for (let i = 0; i < n; i++){
             mobs.spawn(Weight.CHICKEN, weightDropPosition);
@@ -87,7 +87,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `Custom.WeightedCow` weight"
+    //% block="summon %n `Custom.WeightedCow`"
     export function summonWeightCow(n: number): void {
         for (let i = 0; i < n; i++) {
             mobs.spawn(Weight.COW, weightDropPosition);
@@ -97,7 +97,7 @@ namespace hoc22 {
     /**
      * Summon weight (POC1-b)
      */
-    //% block="summon `Custom.WeightedSheep` weight"
+    //% block="summon %n `Custom.WeightedSheep`"
     export function summonWeightSheep(n: number): void {
         for (let i = 0; i < n; i++){
             mobs.spawn(Weight.SHEEP, weightDropPosition);
@@ -142,7 +142,7 @@ namespace hoc22 {
     /**
      * Baking Bread Mill Wheat
      */
-    //% block="mill wheat  `Custom.BreadBakeTwo`"
+    //% block="mill wheat `Custom.BreadBakeTwo`"
     export function bakingBreadGrain(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -199,7 +199,7 @@ namespace hoc22 {
     /**
       * Feed The House Apple
       */
-    //% block="feed house `Item.Apple`"
+    //% block="feed house %n `Item.Apple`"
     export function feedHouseApple(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
@@ -209,7 +209,7 @@ namespace hoc22 {
     /**
       * Feed The House Salmon
       */
-    //% block="feed house `Item.RawSalmon`"
+    //% block="feed house %n `Item.RawSalmon`"
     export function feedHouseSalmon(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
@@ -220,7 +220,7 @@ namespace hoc22 {
     /**
       * Feed The House Mushroom Stew
       */
-    //% block="feed house `Item.MushroomStew`"
+    //% block="feed house %n `Item.MushroomStew`"
     export function feedHouseMushroomStew(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
@@ -462,7 +462,7 @@ namespace hoc22 {
     /**
      * Move King
      */
-    //% block="move `Custom.ChessKing` %direction"
+    //% block="move `Custom.ChessKing` %direction by %n"
     export function kingMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
@@ -488,7 +488,7 @@ namespace hoc22 {
     /**
      * Move Queen
      */
-    //% block="move `Custom.ChessQueen` %direction"
+    //% block="move `Custom.ChessQueen` %direction by %n"
     export function queenMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
