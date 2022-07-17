@@ -5,7 +5,7 @@ enum Weight {
     SHEEP = 13
 }
 
-enum ChessMovementBlock {
+enum Custom {
     //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = 998,
@@ -463,19 +463,19 @@ namespace hoc22 {
      * Move King
      */
     //% block="move `Custom.ChessKing` %direction"
-    export function kingMove(direction: ChessMovementBlock, n: number): void {
+    export function kingMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
-            case ChessMovementBlock.ArrowUpOrange:
+            case Custom.ArrowUpOrange:
                 block = Block.OrangeConcrete
                 break;
-            case ChessMovementBlock.ArrowDownMagenta:
+            case Custom.ArrowDownMagenta:
                 block = Block.MagentaConcrete
                 break;
-            case ChessMovementBlock.ArrowLeftBlue:
+            case Custom.ArrowLeftBlue:
                 block = Block.LightBlueConcrete
                 break;
-            case ChessMovementBlock.ArrowRightYellow:
+            case Custom.ArrowRightYellow:
                 block = Block.YellowConcrete
                 break;
         }
@@ -489,19 +489,19 @@ namespace hoc22 {
      * Move Queen
      */
     //% block="move `Custom.ChessQueen` %direction"
-    export function queenMove(direction: ChessMovementBlock, n: number): void {
+    export function queenMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
-            case ChessMovementBlock.ArrowUpOrange:
+            case Custom.ArrowUpOrange:
                 block = Block.LimeConcrete
                 break;
-            case ChessMovementBlock.ArrowDownMagenta:
+            case Custom.ArrowDownMagenta:
                 block = Block.PinkConcrete
                 break;
-            case ChessMovementBlock.ArrowLeftBlue:
+            case Custom.ArrowLeftBlue:
                 block = Block.GrayConcrete
                 break;
-            case ChessMovementBlock.ArrowRightYellow:
+            case Custom.ArrowRightYellow:
                 block = Block.LightGrayConcrete
                 break;
         }
