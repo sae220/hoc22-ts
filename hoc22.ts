@@ -5,71 +5,30 @@ enum Weight {
     SHEEP = 13
 }
 
-enum ColoredBlockDirection {
-    //% block=left alias=LEFT
-    Left,
-    //% block=right alias=RIGHT
-    Right,
-    //% block=up alias=UP
-    Up,
-    //% block=down alias=DOWN
-    Down
-}
-
-enum ChessBlockDirection {
-    //% block=left alias=LEFT
-    Left,
-    //% block=right alias=RIGHT
-    Right,
-    //% block=forward alias=FORWARD
-    Forward,
-    //% block=back alias=BACK
-    Back
-}
-
-enum MovementBlock {
-    Forward = Block.PinkConcrete,
-    Back = Block.GrayConcrete,
-    Left = Block.LightBlueConcrete,
-    Right = Block.YellowConcrete,
-    Up = Block.OrangeConcrete,
-    Down = Block.MagentaConcrete,
-    Invalid = Block.Bedrock
-}
-
-enum ChessKingMovementBlock {
-    Forward = Block.OrangeConcrete,
-    Back = Block.MagentaConcrete,
-    Left = Block.LightBlueConcrete,
-    Right = Block.YellowConcrete,
-    Invalid = Block.Bedrock
-}
-
-enum ChessQueenMovementBlock {
-    Forward = Block.LimeConcrete,
-    Back = Block.PinkConcrete,
-    Left = Block.GrayConcrete,
-    Right = Block.LightGrayConcrete,
-    Invalid = Block.Bedrock
+enum ChessMovementBlock {
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
+    ArrowUpOrange = 998,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
+    ArrowDownMagenta = 997,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
+    ArrowLeftBlue = 996,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
+    ArrowRightYellow = 995
 }
 
 
 
 
 // global variables
-const placeBlockMechanicsCommunicationPos = world(0, 64, 0)
-const weightDropPosition = world(-18, 77, 162)
-const communicationsTimeout = 100
-const chessTimeout = 500
-const plateTimeout = 500
-const teleportTimeout = 750
+const placeBlockMechanicsCommunicationPos = world(0, 64, 0);
+const weightDropPosition = world(-18, 77, 162);
+const communicationsTimeout = 100;
+const teleportTimeout = 750;
 
-const directions = [
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
-];
 
 //%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
 namespace hoc22 {
@@ -78,58 +37,72 @@ namespace hoc22 {
      * Summon colored blocks (POC1-a)
      */
     //% block="drop `Block.MagentaConcrete` block"
-    export function summonColoredBlockMagenta(): void {
-        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
-        loops.pause(communicationsTimeout)
+    export function summonColoredBlockMagenta(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Summon colored blocks (POC1-a)
      */
     //% block="drop `Block.LightBlueConcrete` block"
-    export function summonColoredBlockLightBlue(): void {
-        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
-        loops.pause(communicationsTimeout)
+    export function summonColoredBlockLightBlue(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Summon colored blocks (POC1-a)
      */
     //% block="drop `Block.YellowConcrete` block"
-    export function summonColoredBlockYellow(): void {
-        blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
-        loops.pause(communicationsTimeout)
+    export function summonColoredBlockYellow(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Summon colored blocks (POC1-a)
      */
     //% block="drop `Block.LimeConcrete` block"
-    export function summonColoredBlockLime(): void {
-        blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
-        loops.pause(communicationsTimeout)
+    export function summonColoredBlockLime(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
      * Summon weight (POC1-b)
      */
     //% block="summon `Custom.WeightedChicken` weight"
-    export function summonWeightChicken(): void {
-        mobs.spawn(Weight.CHICKEN, weightDropPosition);
-        loops.pause(communicationsTimeout)
+    export function summonWeightChicken(n: number): void {
+        for (let i = 0; i < n; i++){
+            mobs.spawn(Weight.CHICKEN, weightDropPosition);
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Summon weight (POC1-b)
      */
     //% block="summon `Custom.WeightedCow` weight"
-    export function summonWeightCow(): void {
-        mobs.spawn(Weight.COW, weightDropPosition);
-        loops.pause(communicationsTimeout)
+    export function summonWeightCow(n: number): void {
+        for (let i = 0; i < n; i++) {
+            mobs.spawn(Weight.COW, weightDropPosition);
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Summon weight (POC1-b)
      */
     //% block="summon `Custom.WeightedSheep` weight"
-    export function summonWeightSheep(): void {
-        mobs.spawn(Weight.SHEEP, weightDropPosition);
-        loops.pause(communicationsTimeout)
+    export function summonWeightSheep(n: number): void {
+        for (let i = 0; i < n; i++){
+            mobs.spawn(Weight.SHEEP, weightDropPosition);
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
@@ -227,25 +200,32 @@ namespace hoc22 {
       * Feed The House Apple
       */
     //% block="feed house `Item.Apple`"
-    export function feedHouseApple(): void {
-        blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    export function feedHouseApple(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
       * Feed The House Salmon
       */
     //% block="feed house `Item.RawSalmon`"
-    export function feedHouseSalmon(): void {
-        blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    export function feedHouseSalmon(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+
     }
     /**
       * Feed The House Mushroom Stew
       */
     //% block="feed house `Item.MushroomStew`"
-    export function feedHouseMushroomStew(): void {
-        blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
+    export function feedHouseMushroomStew(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
@@ -312,14 +292,6 @@ namespace hoc22 {
     export function mosaicPushRight(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
-    }
-
-    /**
-     * Cursor Move
-     */
-    //% block="cursor move %direction"
-    export function cursorMove(direction: ColoredBlockDirection): void {
-        moveCursorInDirection(direction)
     }
 
     /**
@@ -491,15 +463,53 @@ namespace hoc22 {
      * Move King
      */
     //% block="move `Custom.ChessKing` %direction"
-    export function kingMove(direction: ChessBlockDirection): void {
-        moveKingChessInDirection(direction)
+    export function kingMove(direction: ChessMovementBlock, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case ChessMovementBlock.ArrowUpOrange:
+                block = Block.OrangeConcrete
+                break;
+            case ChessMovementBlock.ArrowDownMagenta:
+                block = Block.MagentaConcrete
+                break;
+            case ChessMovementBlock.ArrowLeftBlue:
+                block = Block.LightBlueConcrete
+                break;
+            case ChessMovementBlock.ArrowRightYellow:
+                block = Block.YellowConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++) {
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
     /**
      * Move Queen
      */
     //% block="move `Custom.ChessQueen` %direction"
-    export function queenMove(direction: ChessBlockDirection): void {
-        moveQueenChessInDirection(direction)
+    export function queenMove(direction: ChessMovementBlock, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case ChessMovementBlock.ArrowUpOrange:
+                block = Block.LimeConcrete
+                break;
+            case ChessMovementBlock.ArrowDownMagenta:
+                block = Block.PinkConcrete
+                break;
+            case ChessMovementBlock.ArrowLeftBlue:
+                block = Block.GrayConcrete
+                break;
+            case ChessMovementBlock.ArrowRightYellow:
+                block = Block.LightGrayConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++) {
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
     }
 
     /**
@@ -532,7 +542,7 @@ namespace hoc22 {
      */
     //% block="break block"
     export function breakBlock(): void {
-        placeBlockSignal()
+        placeBlockSignal1(Block.LimeConcrete)
     }
 
     /**
@@ -596,73 +606,14 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
 
-    function placeBlockSignal(): void{
+    function placeBlockSignal(): void {
         blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
 
-    function moveCursorInDirection(direction: ColoredBlockDirection) {
-        const block = convertDirectionToMovementBlock(direction)
-
+    function placeBlockSignal1(block: Block): void {
         blocks.place(block, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
 
-    function moveKingChessInDirection(direction: ChessBlockDirection) {
-        const block = convertKingChessDirectionToMovementBlock(direction)
-
-        blocks.place(block, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
-    }
-    function moveQueenChessInDirection(direction: ChessBlockDirection) {
-        const block = convertQueenChessDirectionToMovementBlock(direction)
-
-        blocks.place(block, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
-    }
-
-    function convertDirectionToMovementBlock(direction: ColoredBlockDirection) : MovementBlock {
-        switch(direction) {
-            case ColoredBlockDirection.Left:
-                return MovementBlock.Left
-            case ColoredBlockDirection.Right:
-                return MovementBlock.Right
-            case ColoredBlockDirection.Up:
-                return MovementBlock.Up
-            case ColoredBlockDirection.Down:
-                return MovementBlock.Down
-        }
-
-        return MovementBlock.Invalid
-    }
-
-    function convertKingChessDirectionToMovementBlock(direction: ChessBlockDirection): ChessKingMovementBlock {
-        switch (direction) {
-            case ChessBlockDirection.Left:
-                return ChessKingMovementBlock.Left
-            case ChessBlockDirection.Right:
-                return ChessKingMovementBlock.Right
-            case ChessBlockDirection.Back:
-                return ChessKingMovementBlock.Back
-            case ChessBlockDirection.Forward:
-                return ChessKingMovementBlock.Forward
-        }
-
-        return ChessKingMovementBlock.Invalid
-    }
-
-    function convertQueenChessDirectionToMovementBlock(direction: ChessBlockDirection): ChessQueenMovementBlock {
-        switch (direction) {
-            case ChessBlockDirection.Left:
-                return ChessQueenMovementBlock.Left
-            case ChessBlockDirection.Right:
-                return ChessQueenMovementBlock.Right
-            case ChessBlockDirection.Back:
-                return ChessQueenMovementBlock.Back
-            case ChessBlockDirection.Forward:
-                return ChessQueenMovementBlock.Forward
-        }
-
-        return ChessQueenMovementBlock.Invalid
-    }
 }
