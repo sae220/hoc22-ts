@@ -123,6 +123,14 @@ namespace hoc22 {
     }
 
     /**
+     * Wait for Block
+     */
+    //% block="wait for block"
+    export function waitForBlock(): void {
+        loops.pause(1000)
+    }
+
+    /**
      * Toggle Redstone Lamp
      */
     //% block="toggle `Block.RedstoneLamp`"
