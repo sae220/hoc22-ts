@@ -20,7 +20,10 @@ enum Custom {
     ArrowRightYellow = 995
 }
 
-
+enum TwoDirection{
+    Left,
+    Right
+}
 
 
 // global variables
@@ -129,7 +132,6 @@ namespace hoc22 {
     export function zombieMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.LightBlueConcrete)
-            loops.pause(communicationsTimeout)
         }
     }
 
@@ -139,6 +141,134 @@ namespace hoc22 {
     //% block="wait for block"
     export function waitForBlock(): void {
         loops.pause(1000)
+    }
+
+    /**
+     * Super Jump
+     */
+    //% block="super jump"
+    export function superJump(): void {
+        placeBlockSignal1(Block.MagentaConcrete)
+    }
+
+    /**
+     * Pull Lever Down
+     */
+    //% block="pull lever down"
+    export function pullLeverDown(): void {
+        placeBlockSignal1(Block.LightBlueConcrete)
+    }
+
+    /**
+     * Move NPC Forward
+     */
+    //% block="move NPC forward by %n"
+    export function npcMoveForward(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.OrangeConcrete)
+        }
+    }
+    /**
+     * Move NPC Back
+     */
+    //% block="move NPC back by %n"
+    export function npcMoveBack(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.MagentaConcrete)
+        }
+    }
+    /**
+     * Move NPC Left
+     */
+    //% block="move NPC left by %n"
+    export function npcMoveLeft(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.LightBlueConcrete)
+        }
+    }
+    /**
+     * Move NPC Right
+     */
+    //% block="move NPC right by %n"
+    export function npcMoveRight(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.YellowConcrete)
+        }
+    }
+
+    /**
+     * Move NPC to Light Blue
+     */
+    //% block="move NPC to Light Blue"
+    export function npcMoveLightBlue(n: number): void {
+        placeBlockSignal1(Block.LightBlueConcrete)
+    }
+    /**
+     * Move NPC Back
+     */
+    //% block="move NPC to Pink"
+    export function npcMovePink(n: number): void {
+        placeBlockSignal1(Block.PinkConcrete)
+    }
+    /**
+     * Move NPC Left
+     */
+    //% block="move NPC to Lime"
+    export function npcMoveLime(n: number): void {
+        placeBlockSignal1(Block.LimeConcrete)
+    }
+    /**
+     * Move NPC Right
+     */
+    //% block="move NPC to Yellow"
+    export function npcMoveYellow(n: number): void {
+        placeBlockSignal1(Block.YellowConcrete)
+    }
+
+    /**
+     * Slide Green Row
+     */
+    //% block = "slide green row %d"
+    export function slideGreenRow(d: TwoDirection): void{
+        switch(d) {
+            case TwoDirection.Left:
+                placeBlockSignal1(Block.OrangeConcrete);
+                break;
+            case TwoDirection.Right:
+                placeBlockSignal1(Block.MagentaConcrete);
+                break;
+        }
+
+    }
+    /**
+     * Slide Yellow Row
+     */
+    //% block = "slide yellow row %d"
+    export function slideYellowRow(d: TwoDirection): void {
+        switch (d) {
+            case TwoDirection.Left:
+                placeBlockSignal1(Block.LightBlueConcrete);
+                break;
+            case TwoDirection.Right:
+                placeBlockSignal1(Block.YellowConcrete);
+                break;
+        }
+
+    }
+    /**
+     * Slide Red Row
+     */
+    //% block = "slide red row %d"
+    export function slideRedRow(d: TwoDirection): void {
+        switch (d) {
+            case TwoDirection.Left:
+                placeBlockSignal1(Block.LimeConcrete);
+                break;
+            case TwoDirection.Right:
+                placeBlockSignal1(Block.PinkConcrete);
+                break;
+        }
+
     }
 
     /**
