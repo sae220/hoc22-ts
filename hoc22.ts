@@ -463,6 +463,14 @@ namespace hoc22 {
     }
 
     /**
+     * Open Trapdoor
+     */
+    //% block="open trapdoor"
+    export function openTrapdoor(): void {
+        placeBlockSignal1(Block.LimeConcrete)
+    }
+
+    /**
       * Greenhouse Flower Planting Red Flower
       */
     //% block="plant `Block.Poppy`"
