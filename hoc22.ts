@@ -123,6 +123,17 @@ namespace hoc22 {
     }
 
     /**
+     * Zombie Move Forward
+     */
+    //% block="move zombie forward by %n"
+    export function zombieMoveForward(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.LightBlueConcrete)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
      * Wait for Block
      */
     //% block="wait for block"
