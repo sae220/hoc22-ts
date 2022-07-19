@@ -276,8 +276,7 @@ namespace hoc22 {
      */
     //% block="toggle `Block.RedstoneLamp`"
     export function toggleLight(): void {
-        placeBlockSignal()
-        loops.pause(communicationsTimeout)
+        placeBlockSignal1(Block.LimeConcrete)
     }
 
     /**
