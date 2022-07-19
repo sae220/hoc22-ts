@@ -199,29 +199,29 @@ namespace hoc22 {
     /**
      * Move NPC to Light Blue
      */
-    //% block="move NPC to Light Blue"
-    export function npcMoveLightBlue(n: number): void {
+    //% block="move NPC to light blue"
+    export function npcMoveLightBlue(): void {
         placeBlockSignal1(Block.LightBlueConcrete)
     }
     /**
-     * Move NPC Back
+     * Move NPC to Pink
      */
-    //% block="move NPC to Pink"
-    export function npcMovePink(n: number): void {
+    //% block="move NPC to pink"
+    export function npcMovePink(): void {
         placeBlockSignal1(Block.PinkConcrete)
     }
     /**
-     * Move NPC Left
+     * Move NPC to Lime
      */
-    //% block="move NPC to Lime"
-    export function npcMoveLime(n: number): void {
+    //% block="move NPC to lime"
+    export function npcMoveLime(): void {
         placeBlockSignal1(Block.LimeConcrete)
     }
     /**
-     * Move NPC Right
+     * Move NPC to Yellow
      */
-    //% block="move NPC to Yellow"
-    export function npcMoveYellow(n: number): void {
+    //% block="move NPC to yellow"
+    export function npcMoveYellow(): void {
         placeBlockSignal1(Block.YellowConcrete)
     }
 
