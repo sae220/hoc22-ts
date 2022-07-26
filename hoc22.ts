@@ -30,7 +30,6 @@ enum TwoDirection{
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0);
 const weightDropPosition = world(-18, 77, 162);
 const communicationsTimeout = 100;
-const teleportTimeout = 750;
 
 
 //%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
@@ -82,7 +81,7 @@ namespace hoc22 {
      */
     //% block="summon %n `Custom.WeightedChicken`"
     export function summonWeightChicken(n: number): void {
-        for (let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             mobs.spawn(Weight.CHICKEN, weightDropPosition);
             loops.pause(communicationsTimeout)
         }
@@ -102,7 +101,7 @@ namespace hoc22 {
      */
     //% block="summon %n `Custom.WeightedSheep`"
     export function summonWeightSheep(n: number): void {
-        for (let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             mobs.spawn(Weight.SHEEP, weightDropPosition);
             loops.pause(communicationsTimeout)
         }
@@ -131,7 +130,7 @@ namespace hoc22 {
     //% block="move zombie forward by %n"
     export function zombieMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.LightBlueConcrete)
+            placeBlockSignal1(Block.OrangeConcrete)
         }
     }
 
@@ -140,7 +139,7 @@ namespace hoc22 {
      */
     //% block="wait for block"
     export function waitForBlock(): void {
-        loops.pause(1000)
+        placeBlockSignal1(Block.MagentaConcrete)
     }
 
     /**
@@ -313,36 +312,32 @@ namespace hoc22 {
     }
 
     /**
-     * Teleport to Light Blue Lever
+     * Move Knight to Light Blue
      */
-    //% block="teleport to light blue lever"
+    //% block="move knight to light blue"
     export function teleportLightBlueLever(): void {
-        player.teleport(world(13, 71, 71))
-        loops.pause(teleportTimeout)
+        placeBlockSignal1(Block.LightBlueConcrete)
     }
     /**
-     * Teleport to Magenta Lever
+     * Move Knight to Magenta
      */
-    //% block="teleport to magenta lever"
+    //% block="move knight to magenta"
     export function teleportMagentaLever(): void {
-        player.teleport(world(23, 71, 71))
-        loops.pause(teleportTimeout)
+        placeBlockSignal1(Block.MagentaConcrete)
     }
     /**
-     * Teleport to Yellow Lever
+     * Move Knight to Yellow
      */
-    //% block="teleport to yellow lever"
+    //% block="move knight to yellow"
     export function teleportYellowLever(): void {
-        player.teleport(world(11, 71, 71))
-        loops.pause(teleportTimeout)
+        placeBlockSignal1(Block.YellowConcrete)
     }
     /**
-     * Teleport to Orange Lever
+     * Move Knight to Orange
      */
-    //% block="teleport to orange lever"
+    //% block="move knight to orange"
     export function teleportOrangeLever(): void {
-        player.teleport(world(21, 71, 71))
-        loops.pause(teleportTimeout)
+        placeBlockSignal1(Block.OrangeConcrete)
     }
     /**
       * Feed The House Apple
@@ -627,7 +622,7 @@ namespace hoc22 {
         loops.pause(communicationsTimeout)
     }
 
-    
+
     /**
       * Greenhouse Flower Planting Yellow Flower
       */
@@ -650,7 +645,7 @@ namespace hoc22 {
       */
     //% block="sort %n `Custom.ZombieFace`"
     export function minecraftSortingZombie(n: number): void {
-        for (let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
@@ -660,7 +655,7 @@ namespace hoc22 {
       */
     //% block="sort %n `Custom.SkeletonFace`"
     export function minecraftSortingSkeleton(n: number): void {
-        for (let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
@@ -670,14 +665,14 @@ namespace hoc22 {
       */
     //% block="sort %n `Custom.CreeperFace`"
     export function minecraftSortingCreeper(n: number): void {
-        for (let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
 
     //% block="`Custom.PhantomMembrane`"
-    export function phantomMembrane(): void{}
+    export function phantomMembrane(): void { }
 
     // helper functions
     function resetSignal(): void {
