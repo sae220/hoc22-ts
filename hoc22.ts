@@ -271,9 +271,9 @@ namespace hoc22 {
     }
 
     /**
-     * Toggle Redstone Lamp
+     * Turn Off Redstone Lamp
      */
-    //% block="toggle `Block.RedstoneLamp`"
+    //% block="turn off `Block.RedstoneLamp`"
     export function toggleLight(): void {
         placeBlockSignal1(Block.LimeConcrete)
     }
