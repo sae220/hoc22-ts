@@ -116,6 +116,14 @@ namespace hoc22 {
     }
 
     /**
+     * Clay Ball Move
+     */
+    //% block="clay ball move %d by %n"
+    export function clayBallMove(d: SixDirection, n: number): void {
+        agent.move(d, n)
+    }
+
+    /**
      * Place Block
      */
     //% block="place block"
@@ -125,10 +133,20 @@ namespace hoc22 {
     }
 
     /**
-     * Zombie Move Forward
+     * Clay Golem Move Forward
      */
-    //% block="move zombie forward by %n"
-    export function zombieMoveForward(n: number): void {
+    //% block="move clay golem forward by %n"
+    export function clayGolemMoveForward(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal1(Block.OrangeConcrete)
+        }
+    }
+
+    /**
+     * Enderman Butler Move Forward
+     */
+    //% block="move enderman butler forward by %n"
+    export function endermanButlerMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.OrangeConcrete)
         }
@@ -159,36 +177,36 @@ namespace hoc22 {
     }
 
     /**
-     * Move NPC Forward
+     * Move Enderman Butler Forward
      */
-    //% block="move NPC forward by %n"
+    //% block="move enderman butler forward by %n"
     export function npcMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.OrangeConcrete)
         }
     }
     /**
-     * Move NPC Back
+     * Move Enderman Butler Back
      */
-    //% block="move NPC back by %n"
+    //% block="move enderman butler back by %n"
     export function npcMoveBack(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.MagentaConcrete)
         }
     }
     /**
-     * Move NPC Left
+     * Move Enderman Butler Left
      */
-    //% block="move NPC left by %n"
+    //% block="move enderman butler left by %n"
     export function npcMoveLeft(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.LightBlueConcrete)
         }
     }
     /**
-     * Move NPC Right
+     * Move Enderman Butler Right
      */
-    //% block="move NPC right by %n"
+    //% block="move enderman butler right by %n"
     export function npcMoveRight(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.YellowConcrete)
@@ -196,30 +214,30 @@ namespace hoc22 {
     }
 
     /**
-     * Move NPC to Light Blue
+     * Move Enderman Butler to Light Blue
      */
-    //% block="move NPC to light blue"
+    //% block="move enderman butler to `Block.LightBlueTerracotta`"
     export function npcMoveLightBlue(): void {
         placeBlockSignal1(Block.LightBlueConcrete)
     }
     /**
-     * Move NPC to Pink
+     * Move Enderman Butler to Pink
      */
-    //% block="move NPC to pink"
+    //% block="move enderman butler to `Block.PinkTerracotta`"
     export function npcMovePink(): void {
         placeBlockSignal1(Block.PinkConcrete)
     }
     /**
-     * Move NPC to Lime
+     * Move Enderman Butler to Lime
      */
-    //% block="move NPC to lime"
+    //% block="move enderman butler to `Block.LimeTerracotta`"
     export function npcMoveLime(): void {
         placeBlockSignal1(Block.LimeConcrete)
     }
     /**
-     * Move NPC to Yellow
+     * Move Enderman Butler to Yellow
      */
-    //% block="move NPC to yellow"
+    //% block="move enderman butler to `Block.YellowTerracotta`"
     export function npcMoveYellow(): void {
         placeBlockSignal1(Block.YellowConcrete)
     }
@@ -271,9 +289,9 @@ namespace hoc22 {
     }
 
     /**
-     * Turn Off Redstone Lamp
+     * Turn On Redstone Lamp
      */
-    //% block="turn off `Block.RedstoneLamp`"
+    //% block="turn on `Block.RedstoneLamp`"
     export function toggleLight(): void {
         placeBlockSignal1(Block.LimeConcrete)
     }
