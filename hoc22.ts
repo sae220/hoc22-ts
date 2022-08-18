@@ -145,7 +145,7 @@ namespace hoc22 {
     /**
      * Enderman Butler Move Forward
      */
-    //% block="move enderman butler forward by %n"
+    //% block="move enderman by %n"
     export function endermanButlerMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.OrangeConcrete)
@@ -161,9 +161,9 @@ namespace hoc22 {
     }
 
     /**
-     * Super Jump
+     * Teleport to Diamond Block
      */
-    //% block="super jump"
+    //% block="teleport enderman to `Block.DiamondBlock`"
     export function superJump(): void {
         placeBlockSignal1(Block.MagentaConcrete)
     }
@@ -177,9 +177,9 @@ namespace hoc22 {
     }
 
     /**
-     * Move Enderman Butler Forward
+     * Move Enderman Forward
      */
-    //% block="move enderman butler forward by %n"
+    //% block="move enderman forward by %n"
     export function npcMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.OrangeConcrete)
@@ -188,7 +188,7 @@ namespace hoc22 {
     /**
      * Move Enderman Butler Back
      */
-    //% block="move enderman butler back by %n"
+    //% block="move enderman back by %n"
     export function npcMoveBack(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.MagentaConcrete)
@@ -197,7 +197,7 @@ namespace hoc22 {
     /**
      * Move Enderman Butler Left
      */
-    //% block="move enderman butler left by %n"
+    //% block="move enderman left by %n"
     export function npcMoveLeft(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.LightBlueConcrete)
@@ -206,7 +206,7 @@ namespace hoc22 {
     /**
      * Move Enderman Butler Right
      */
-    //% block="move enderman butler right by %n"
+    //% block="move enderman right by %n"
     export function npcMoveRight(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal1(Block.YellowConcrete)
@@ -216,28 +216,28 @@ namespace hoc22 {
     /**
      * Move Enderman Butler to Light Blue
      */
-    //% block="move enderman butler to `Block.LightBlueTerracotta`"
+    //% block="move enderman butler to `Block.LightBlueGlazedTerracotta`"
     export function npcMoveLightBlue(): void {
         placeBlockSignal1(Block.LightBlueConcrete)
     }
     /**
      * Move Enderman Butler to Pink
      */
-    //% block="move enderman butler to `Block.PinkTerracotta`"
+    //% block="move enderman butler to `Block.PinkGlazedTerracotta`"
     export function npcMovePink(): void {
         placeBlockSignal1(Block.PinkConcrete)
     }
     /**
      * Move Enderman Butler to Lime
      */
-    //% block="move enderman butler to `Block.LimeTerracotta`"
+    //% block="move enderman butler to `Block.LimeGlazedTerracotta`"
     export function npcMoveLime(): void {
         placeBlockSignal1(Block.LimeConcrete)
     }
     /**
      * Move Enderman Butler to Yellow
      */
-    //% block="move enderman butler to `Block.YellowTerracotta`"
+    //% block="move enderman butler to `Block.YellowGlazedTerracotta`"
     export function npcMoveYellow(): void {
         placeBlockSignal1(Block.YellowConcrete)
     }
@@ -245,7 +245,7 @@ namespace hoc22 {
     /**
      * Slide Green Row
      */
-    //% block = "slide green row %d"
+    //% block = "slide `Custom.GreenSlide` %d"
     export function slideGreenRow(d: TwoDirection): void{
         switch(d) {
             case TwoDirection.Left:
@@ -260,7 +260,7 @@ namespace hoc22 {
     /**
      * Slide Yellow Row
      */
-    //% block = "slide yellow row %d"
+    //% block = "slide `Custom.YellowSlide` %d"
     export function slideYellowRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
@@ -275,7 +275,7 @@ namespace hoc22 {
     /**
      * Slide Red Row
      */
-    //% block = "slide red row %d"
+    //% block = "slide `Custom.RedSlide` %d"
     export function slideRedRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
