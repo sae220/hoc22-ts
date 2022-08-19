@@ -20,7 +20,7 @@ enum Custom {
     ArrowRightYellow = 995
 }
 
-enum TwoDirection{
+enum TwoDirection {
     Left,
     Right
 }
@@ -36,7 +36,7 @@ const communicationsTimeout = 100;
 namespace hoc22 {
 
     /**
-     * Summon colored blocks (POC1-a)
+     * Summon Magenta Block
      */
     //% block="drop %n `Block.MagentaConcrete`"
     export function summonColoredBlockMagenta(n: number): void {
@@ -46,7 +46,7 @@ namespace hoc22 {
         }
     }
     /**
-     * Summon colored blocks (POC1-a)
+     * Summon Light Blue Block
      */
     //% block="drop %n `Block.LightBlueConcrete`"
     export function summonColoredBlockLightBlue(n: number): void {
@@ -56,7 +56,7 @@ namespace hoc22 {
         }
     }
     /**
-     * Summon colored blocks (POC1-a)
+     * Summon Yellow Block
      */
     //% block="drop %n `Block.YellowConcrete`"
     export function summonColoredBlockYellow(n: number): void {
@@ -66,7 +66,7 @@ namespace hoc22 {
         }
     }
     /**
-     * Summon colored blocks (POC1-a)
+     * Summon Green Block
      */
     //% block="drop %n `Block.LimeConcrete`"
     export function summonColoredBlockLime(n: number): void {
@@ -77,7 +77,7 @@ namespace hoc22 {
     }
 
     /**
-     * Summon weight (POC1-b)
+     * Summon Chicken Weight
      */
     //% block="summon %n `Custom.WeightedChicken`"
     export function summonWeightChicken(n: number): void {
@@ -87,7 +87,7 @@ namespace hoc22 {
         }
     }
     /**
-     * Summon weight (POC1-b)
+     * Summon Cow Weight
      */
     //% block="summon %n `Custom.WeightedCow`"
     export function summonWeightCow(n: number): void {
@@ -97,7 +97,7 @@ namespace hoc22 {
         }
     }
     /**
-     * Summon weight (POC1-b)
+     * Summon Sheep Weight
      */
     //% block="summon %n `Custom.WeightedSheep`"
     export function summonWeightSheep(n: number): void {
@@ -108,7 +108,7 @@ namespace hoc22 {
     }
 
     /**
-     * Agent Move (POC1-c)
+     * Agent Move 
      */
     //% block="agent move %d by %n"
     export function agentMove(d: SixDirection, n: number): void {
@@ -128,8 +128,7 @@ namespace hoc22 {
      */
     //% block="place block"
     export function placeBlock(): void {
-        placeBlockSignal()
-        loops.pause(communicationsTimeout)
+        placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
@@ -138,7 +137,7 @@ namespace hoc22 {
     //% block="move clay golem forward by %n"
     export function clayGolemMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.OrangeConcrete)
+            placeBlockSignal(Block.OrangeConcrete)
         }
     }
 
@@ -148,7 +147,7 @@ namespace hoc22 {
     //% block="move enderman by %n"
     export function endermanButlerMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.OrangeConcrete)
+            placeBlockSignal(Block.OrangeConcrete)
         }
     }
 
@@ -157,7 +156,7 @@ namespace hoc22 {
      */
     //% block="wait for block"
     export function waitForBlock(): void {
-        placeBlockSignal1(Block.MagentaConcrete)
+        placeBlockSignal(Block.MagentaConcrete)
     }
 
     /**
@@ -165,7 +164,79 @@ namespace hoc22 {
      */
     //% block="teleport enderman to `Block.DiamondBlock`"
     export function superJump(): void {
-        placeBlockSignal1(Block.MagentaConcrete)
+        placeBlockSignal(Block.MagentaConcrete)
+    }
+
+    /**
+     * Activate Yellow Cannon
+     */
+    //% block="activate `Block.YellowConcrete` cannon"
+    export function yellowCannon(): void {
+        placeBlockSignal(Block.YellowConcrete)
+    }
+
+    /**
+     * Activate Lime Cannon
+     */
+    //% block="activate `Block.LimeConcrete` cannon"
+    export function limeCannon(): void {
+        placeBlockSignal(Block.LimeConcrete)
+    }
+
+    /**
+     * Activate Yellow Cannon
+     */
+    //% block="activate `Block.LightBlueConcrete` cannon"
+    export function lightBlueCannon(): void {
+        placeBlockSignal(Block.LightBlueConcrete)
+    }
+
+    /**
+     * Activate Magenta Cannon
+     */
+    //% block="activate `Block.MagentaConcrete` cannon"
+    export function magentaCannon(): void {
+        placeBlockSignal(Block.MagentaConcrete)
+    }
+
+    /**
+     * Rotate Outer Ring Clockwise
+     */
+    //% block="rotate `Custom.OuterClockwise` clockwise by %n"
+    export function outerRingClockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.OrangeConcrete)
+        }
+    }
+
+    /**
+     * Rotate Outer Ring Counterclockwise
+     */
+    //% block="rotate `Custom.OuterCounterclockwise` counterclockwise by %n"
+    export function outerRingCounterclockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.MagentaConcrete)
+        }
+    }
+
+    /**
+     * Rotate Middle Ring Clockwise
+     */
+    //% block="rotate `Custom.MiddleClockwise` clockwise by %n"
+    export function middleRingClockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.LightBlueConcrete)
+        }
+    }
+
+    /**
+     * Rotate Middle Ring Counterclockwise
+     */
+    //% block="rotate `Custom.MiddleCounterclockwise` counterclockwise by %n"
+    export function middleRingCounterclockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.YellowConcrete)
+        }
     }
 
     /**
@@ -173,7 +244,15 @@ namespace hoc22 {
      */
     //% block="pull lever down"
     export function pullLeverDown(): void {
-        placeBlockSignal1(Block.LightBlueConcrete)
+        placeBlockSignal(Block.LightBlueConcrete)
+    }
+
+    /**
+     * Pull Lever Down
+     */
+    //% block="pull lever down"
+    export function pullLeverDownLime(): void {
+        placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
@@ -182,7 +261,7 @@ namespace hoc22 {
     //% block="move enderman forward by %n"
     export function npcMoveForward(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.OrangeConcrete)
+            placeBlockSignal(Block.OrangeConcrete)
         }
     }
     /**
@@ -191,7 +270,7 @@ namespace hoc22 {
     //% block="move enderman back by %n"
     export function npcMoveBack(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.MagentaConcrete)
+            placeBlockSignal(Block.MagentaConcrete)
         }
     }
     /**
@@ -200,7 +279,7 @@ namespace hoc22 {
     //% block="move enderman left by %n"
     export function npcMoveLeft(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.LightBlueConcrete)
+            placeBlockSignal(Block.LightBlueConcrete)
         }
     }
     /**
@@ -209,7 +288,7 @@ namespace hoc22 {
     //% block="move enderman right by %n"
     export function npcMoveRight(n: number): void {
         for (let i = 0; i < n; i++) {
-            placeBlockSignal1(Block.YellowConcrete)
+            placeBlockSignal(Block.YellowConcrete)
         }
     }
 
@@ -218,41 +297,41 @@ namespace hoc22 {
      */
     //% block="move enderman butler to `Block.LightBlueGlazedTerracotta`"
     export function npcMoveLightBlue(): void {
-        placeBlockSignal1(Block.LightBlueConcrete)
+        placeBlockSignal(Block.LightBlueConcrete)
     }
     /**
      * Move Enderman Butler to Pink
      */
     //% block="move enderman butler to `Block.PinkGlazedTerracotta`"
     export function npcMovePink(): void {
-        placeBlockSignal1(Block.PinkConcrete)
+        placeBlockSignal(Block.PinkConcrete)
     }
     /**
      * Move Enderman Butler to Lime
      */
     //% block="move enderman butler to `Block.LimeGlazedTerracotta`"
     export function npcMoveLime(): void {
-        placeBlockSignal1(Block.LimeConcrete)
+        placeBlockSignal(Block.LimeConcrete)
     }
     /**
      * Move Enderman Butler to Yellow
      */
     //% block="move enderman butler to `Block.YellowGlazedTerracotta`"
     export function npcMoveYellow(): void {
-        placeBlockSignal1(Block.YellowConcrete)
+        placeBlockSignal(Block.YellowConcrete)
     }
 
     /**
      * Slide Green Row
      */
     //% block = "slide `Custom.GreenSlide` %d"
-    export function slideGreenRow(d: TwoDirection): void{
-        switch(d) {
+    export function slideGreenRow(d: TwoDirection): void {
+        switch (d) {
             case TwoDirection.Left:
-                placeBlockSignal1(Block.OrangeConcrete);
+                placeBlockSignal(Block.OrangeConcrete);
                 break;
             case TwoDirection.Right:
-                placeBlockSignal1(Block.MagentaConcrete);
+                placeBlockSignal(Block.MagentaConcrete);
                 break;
         }
 
@@ -264,10 +343,10 @@ namespace hoc22 {
     export function slideYellowRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
-                placeBlockSignal1(Block.LightBlueConcrete);
+                placeBlockSignal(Block.LightBlueConcrete);
                 break;
             case TwoDirection.Right:
-                placeBlockSignal1(Block.YellowConcrete);
+                placeBlockSignal(Block.YellowConcrete);
                 break;
         }
 
@@ -279,10 +358,10 @@ namespace hoc22 {
     export function slideRedRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
-                placeBlockSignal1(Block.LimeConcrete);
+                placeBlockSignal(Block.LimeConcrete);
                 break;
             case TwoDirection.Right:
-                placeBlockSignal1(Block.PinkConcrete);
+                placeBlockSignal(Block.PinkConcrete);
                 break;
         }
 
@@ -293,7 +372,7 @@ namespace hoc22 {
      */
     //% block="turn on `Block.RedstoneLamp`"
     export function toggleLight(): void {
-        placeBlockSignal1(Block.LimeConcrete)
+        placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
@@ -330,32 +409,32 @@ namespace hoc22 {
     }
 
     /**
-     * Move Knight to Light Blue
+     * Move Armor to Light Blue
      */
-    //% block="move knight to light blue"
+    //% block="flip `Blocks.LightBlueCarpet` lever"
     export function teleportLightBlueLever(): void {
-        placeBlockSignal1(Block.LightBlueConcrete)
+        placeBlockSignal(Block.LightBlueConcrete)
     }
     /**
-     * Move Knight to Magenta
+     * Move Armor to Magenta
      */
-    //% block="move knight to magenta"
+    //% block="flip `Blocks.MagentaCarpet` lever"
     export function teleportMagentaLever(): void {
-        placeBlockSignal1(Block.MagentaConcrete)
+        placeBlockSignal(Block.MagentaConcrete)
     }
     /**
-     * Move Knight to Yellow
+     * Move Armor to Yellow
      */
-    //% block="move knight to yellow"
+    //% block="flip `Blocks.YellowCarpet` lever"
     export function teleportYellowLever(): void {
-        placeBlockSignal1(Block.YellowConcrete)
+        placeBlockSignal(Block.YellowConcrete)
     }
     /**
-     * Move Knight to Orange
+     * Move Armor to Orange
      */
-    //% block="move knight to orange"
+    //% block="flip `Blocks.OrangeCarpet` lever"
     export function teleportOrangeLever(): void {
-        placeBlockSignal1(Block.OrangeConcrete)
+        placeBlockSignal(Block.OrangeConcrete)
     }
     /**
       * Feed The House Apple
@@ -620,7 +699,7 @@ namespace hoc22 {
      */
     //% block="break block"
     export function breakBlock(): void {
-        placeBlockSignal1(Block.LimeConcrete)
+        placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
@@ -628,7 +707,7 @@ namespace hoc22 {
      */
     //% block="open trapdoor"
     export function openTrapdoor(): void {
-        placeBlockSignal1(Block.LimeConcrete)
+        placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
@@ -693,17 +772,8 @@ namespace hoc22 {
     export function phantomMembrane(): void { }
 
     // helper functions
-    function resetSignal(): void {
-        blocks.place(Block.WhiteConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
-    }
 
-    function placeBlockSignal(): void {
-        blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos)
-        loops.pause(communicationsTimeout)
-    }
-
-    function placeBlockSignal1(block: Block): void {
+    function placeBlockSignal(block: Block): void {
         blocks.place(block, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
     }
