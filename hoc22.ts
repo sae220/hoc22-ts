@@ -321,21 +321,7 @@ namespace hoc22 {
         placeBlockSignal(Block.YellowConcrete)
     }
 
-    /**
-     * Slide Green Row
-     */
-    //% block = "slide `Block.YellowGlazedTerracotta` %d"
-    export function slideGreenRow(d: TwoDirection): void {
-        switch (d) {
-            case TwoDirection.Left:
-                placeBlockSignal(Block.OrangeConcrete);
-                break;
-            case TwoDirection.Right:
-                placeBlockSignal(Block.MagentaConcrete);
-                break;
-        }
 
-    }
     /**
      * Slide Yellow Row
      */
