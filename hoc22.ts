@@ -324,7 +324,7 @@ namespace hoc22 {
     /**
      * Slide Green Row
      */
-    //% block = "slide `Custom.WeightedCow` %d"
+    //% block = "test"
     export function slideGreenRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
