@@ -340,36 +340,43 @@ namespace hoc22 {
             placeBlockSignal(selectedBlock);
         }
     }
-
     /**
-     * Slide Yellow Row
+     * Slide Row: Yellow
      */
-    //% block = "slide `Custom.YellowSlide` %d"
-    export function slideYellowRow(d: TwoDirection): void {
+    //% block="slide `Block.YellowStainedGlass` %d by %n"
+    export function slideYellowRow(d: TwoDirection, n: number): void {
+        let selectedBlock = Block.WhiteConcrete
+
         switch (d) {
             case TwoDirection.Left:
-                placeBlockSignal(Block.LightBlueConcrete);
+                selectedBlock = Block.LightBlueConcrete
                 break;
             case TwoDirection.Right:
-                placeBlockSignal(Block.YellowConcrete);
+                selectedBlock = Block.YellowConcrete
                 break;
         }
-
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(selectedBlock);
+        }
     }
     /**
-     * Slide Red Row
+     * Slide Row: Red
      */
-    //% block = "slide `Custom.RedSlide` %d"
-    export function slideRedRow(d: TwoDirection): void {
+    //% block="slide `Block.RedStainedGlass` %d by %n"
+    export function slideRedRow(d: TwoDirection, n: number): void {
+        let selectedBlock = Block.WhiteConcrete
+
         switch (d) {
             case TwoDirection.Left:
-                placeBlockSignal(Block.LimeConcrete);
+                selectedBlock = Block.LimeConcrete
                 break;
             case TwoDirection.Right:
-                placeBlockSignal(Block.PinkConcrete);
+                selectedBlock = Block.PinkConcrete
                 break;
         }
-
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(selectedBlock);
+        }
     }
 
     /**
