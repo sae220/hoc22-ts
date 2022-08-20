@@ -324,7 +324,7 @@ namespace hoc22 {
     /**
      * Slide Row: Green
      */
-    //% block="slide `Custom.WeightedChicken` %d by %n"
+    //% block="slide `Custom.GreenSlide` %d by %n"
     export function slideGreenRow(d: TwoDirection, n: number): void {
         let selectedBlock = Block.WhiteConcrete
 
