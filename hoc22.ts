@@ -326,7 +326,7 @@ namespace hoc22 {
      */
     //% block="slide `Block.YellowGlazedTerracotta` %d"
     export function slideGreenRow(d: TwoDirection, n: number): void {
-        let selectedBlock
+        let selectedBlock = Block.WhiteConcrete
 
         switch (d) {
             case TwoDirection.Left:
