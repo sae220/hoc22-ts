@@ -324,7 +324,7 @@ namespace hoc22 {
     /**
      * Slide Green Row
      */
-    //% block = "slide `Custom.GreenSlide` %d"
+    //% block = "slide `Custom.WeightedCow` %d"
     export function slideGreenRow(d: TwoDirection): void {
         switch (d) {
             case TwoDirection.Left:
@@ -411,28 +411,28 @@ namespace hoc22 {
     /**
      * Move Armor to Light Blue
      */
-    //% block="flip `Blocks.LightBlueCarpet` lever"
+    //% block="flip `Block.LightBlueCarpet` lever"
     export function teleportLightBlueLever(): void {
         placeBlockSignal(Block.LightBlueConcrete)
     }
     /**
      * Move Armor to Magenta
      */
-    //% block="flip `Blocks.MagentaCarpet` lever"
+    //% block="flip `Block.MagentaCarpet` lever"
     export function teleportMagentaLever(): void {
         placeBlockSignal(Block.MagentaConcrete)
     }
     /**
      * Move Armor to Yellow
      */
-    //% block="flip `Blocks.YellowCarpet` lever"
+    //% block="flip `Block.YellowCarpet` lever"
     export function teleportYellowLever(): void {
         placeBlockSignal(Block.YellowConcrete)
     }
     /**
      * Move Armor to Orange
      */
-    //% block="flip `Blocks.OrangeCarpet` lever"
+    //% block="flip `Block.OrangeCarpet` lever"
     export function teleportOrangeLever(): void {
         placeBlockSignal(Block.OrangeConcrete)
     }
