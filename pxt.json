@@ -12,7 +12,7 @@
         "custom.jres"
     ],
     "targetVersions": {
-        "target": "1.6.26",
+        "target": "1.6.27",
         "targetId": "minecraft"
     },
     "supportedTargets": [

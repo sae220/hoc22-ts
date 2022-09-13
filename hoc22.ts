@@ -132,6 +132,37 @@ namespace hoc22 {
     }
 
     /**
+    * Place Magenta Concrete
+    */
+    //% block="place `Block.MagentaConcrete` block"
+    export function placeMagentaBlock(): void {
+        placeBlockSignal(Block.LimeConcrete)
+    }
+    /**
+     * Place Lime Concrete
+     */
+    //% block="place `Block.LimeConcrete` block"
+    export function placeLimeBlock(): void {
+        placeBlockSignal(Block.PinkConcrete)
+    }
+    /**
+     * Place Yellow Concrete
+     */
+    //% block="place `Block.YellowConcrete` block"
+    export function placeYellowBlock(): void {
+        placeBlockSignal(Block.GrayConcrete)
+    }
+    /**
+     * Place Light Blue
+     */
+    //% block="place `Block.LightBlueConcrete` block"
+    export function placeLightBlueBlock(): void {
+        placeBlockSignal(Block.LightGrayConcrete)
+    }
+
+
+
+    /**
      * Clay Golem Move Forward
      */
     //% block="move clay golem forward by %n"
@@ -202,7 +233,7 @@ namespace hoc22 {
     /**
      * Rotate Outer Ring Clockwise
      */
-    //% block="rotate `Custom.OuterClockwise` clockwise by %n"
+    //% block="rotate outer-ring clockwise by %n"
     export function outerRingClockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.OrangeConcrete)
@@ -212,7 +243,7 @@ namespace hoc22 {
     /**
      * Rotate Outer Ring Counterclockwise
      */
-    //% block="rotate `Custom.OuterCounterclockwise` counterclockwise by %n"
+    //% block="rotate outer-ring counterclockwise by %n"
     export function outerRingCounterclockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.MagentaConcrete)
@@ -222,7 +253,7 @@ namespace hoc22 {
     /**
      * Rotate Middle Ring Clockwise
      */
-    //% block="rotate `Custom.MiddleClockwise` clockwise by %n"
+    //% block="rotate middle-ring clockwise by %n"
     export function middleRingClockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.LightBlueConcrete)
@@ -232,10 +263,30 @@ namespace hoc22 {
     /**
      * Rotate Middle Ring Counterclockwise
      */
-    //% block="rotate `Custom.MiddleCounterclockwise` counterclockwise by %n"
+    //% block="rotate middle-ring counterclockwise by %n"
     export function middleRingCounterclockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.YellowConcrete)
+        }
+    }
+
+    /**
+     * Rotate Inner Ring Clockwise
+     */
+    //% block="rotate inner-ring clockwise by %n"
+    export function innerRingClockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.LimeConcrete)
+        }
+    }
+
+    /**
+     * Rotate Inner Ring Counterclockwise
+     */
+    //% block="rotate inner-ring counterclockwise by %n"
+    export function innerRingCounterclockwise(n: number): void {
+        for (let i = 0; i < n; i++) {
+            placeBlockSignal(Block.PinkConcrete)
         }
     }
 
