@@ -28,16 +28,16 @@ enum TwoDirection {
 }
 
 enum CursorOrientationOne1 {
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% blockIdentity="CursorOrientationOne.ArrowUpOrange" enumval=998 block="Arrow Up Orange"
     //% jres alias=CursorOrientationOne.ArrowUpOrange
     ArrowUpOrange = 899,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% blockIdentity="CursorOrientationOne.ArrowDownMagenta" enumval=997 block="Arrow Down Magenta"
     //% jres alias=CursorOrientationOne.ArrowDownMagenta
     ArrowDownMagenta = 898,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% blockIdentity="CursorOrientationOne.ArrowLeftBlue" enumval=996 block="Arrow Left Blue"
     //% jres alias=CursorOrientationOne.ArrowLeftBlue
     ArrowLeftBlue = 897,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% blockIdentity="CursorOrientationOne.ArrowRightYellow" enumval=995 block="Arrow Right Yellow"
     //% jres alias=CursorOrientationOne.ArrowRightYellow
     ArrowRightYellow = 896
 }
