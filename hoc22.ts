@@ -46,33 +46,12 @@ const communicationsTimeout = 100;
 namespace hoc22 {
 
     /**
-    * Shift Red Row
-    */
-    //% block="shift %direction by %n"
-    export function RedLaser(direction: RedLaserSlide, n: number): void {
-        let block = Block.WhiteConcrete
-        switch (direction) {
-            case RedLaserSlide.Right:
-                block = Block.OrangeConcrete
-                break;
-            case RedLaserSlide.Left:
-                block = Block.MagentaConcrete
-                break;
-        }
-
-        for (let i = 0; i < n; i++) {
-            blocks.place(block, placeBlockMechanicsCommunicationPos)
-            loops.pause(communicationsTimeout)
-        }
-    }
-
-    /**
      * Shift Red Row Right
      */
     //% block="shift right `Custom.RedRight` by %n"
     export function RedRightLaser(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            blocks.place(PINK_CONCRETE, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
@@ -94,7 +73,7 @@ namespace hoc22 {
     //% block="shift right `Custom.GreenRight` by %n"
     export function GreenRightLaser(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            blocks.place(MAGENTA_CONCRETE, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
@@ -105,7 +84,7 @@ namespace hoc22 {
     //% block="shift left `Custom.GreenLeft` by %n"
     export function GreenLeftLaser(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            blocks.place(ORANGE_CONCRETE, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
@@ -116,7 +95,7 @@ namespace hoc22 {
     //% block="shift right `Custom.YellowRight` by %n"
     export function YellowRightLaser(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            blocks.place(YELLOW_CONCRETE, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
@@ -127,7 +106,7 @@ namespace hoc22 {
     //% block="shift left `Custom.YellowLeft` by %n"
     export function YellowLeftLaser(n: number): void {
         for (let i = 0; i < n; i++) {
-            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            blocks.place(LIGHT_BLUE_CONCRETE, placeBlockMechanicsCommunicationPos)
             loops.pause(communicationsTimeout)
         }
     }
@@ -467,64 +446,6 @@ namespace hoc22 {
     //% block="move enderman butler to `Block.YellowGlazedTerracotta`"
     export function npcMoveYellow(): void {
         placeBlockSignal(Block.YellowConcrete)
-    }
-
-    /**
-     * Slide Row: Green
-     */
-    //% block="slide `Block.LimeStainedGlass` %d by %n"
-    export function slideGreenRow(d: TwoDirection, n: number): void {
-        let selectedBlock = Block.WhiteConcrete
-
-        switch (d) {
-            case TwoDirection.Left:
-                selectedBlock = Block.OrangeConcrete
-                break;
-            case TwoDirection.Right:
-                selectedBlock = Block.MagentaConcrete
-                break;
-        }
-        for (let i = 0; i < n; i++) {
-            placeBlockSignal(selectedBlock);
-        }
-    }
-    /**
-     * Slide Row: Yellow
-     */
-    //% block="slide `Block.YellowStainedGlass` %d by %n"
-    export function slideYellowRow(d: TwoDirection, n: number): void {
-        let selectedBlock = Block.WhiteConcrete
-
-        switch (d) {
-            case TwoDirection.Left:
-                selectedBlock = Block.LightBlueConcrete
-                break;
-            case TwoDirection.Right:
-                selectedBlock = Block.YellowConcrete
-                break;
-        }
-        for (let i = 0; i < n; i++) {
-            placeBlockSignal(selectedBlock);
-        }
-    }
-    /**
-     * Slide Row: Red
-     */
-    //% block="slide `Block.RedStainedGlass` %d by %n"
-    export function slideRedRow(d: TwoDirection, n: number): void {
-        let selectedBlock = Block.WhiteConcrete
-
-        switch (d) {
-            case TwoDirection.Left:
-                selectedBlock = Block.LimeConcrete
-                break;
-            case TwoDirection.Right:
-                selectedBlock = Block.PinkConcrete
-                break;
-        }
-        for (let i = 0; i < n; i++) {
-            placeBlockSignal(selectedBlock);
-        }
     }
 
     /**
