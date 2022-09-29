@@ -42,6 +42,11 @@ enum CursorOrientationOne {
     ArrowRightYellow = 896
 }
 
+enum RedLaserSlide {
+    Right,
+    Left
+}
+
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0);
 const weightDropPosition = world(-18, 77, 162);
@@ -50,6 +55,28 @@ const communicationsTimeout = 100;
 
 //%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
 namespace hoc22 {
+
+    /**
+    * Shift Red Row
+    */
+    //% block="Shift Red Row %direction by %n"
+    export function RedLaser(direction: RedLaserSlide, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case RedLaserSlide.Right:
+                block = Block.OrangeConcrete
+                break;
+            case RedLaserSlide.Left:
+                block = Block.MagentaConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++) {
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
 
     /**
      * Cursor Move Orientation One
