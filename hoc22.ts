@@ -81,6 +81,72 @@ namespace hoc22 {
         }
     }
 
+    /**
+     * Shift Red Row Right
+     */
+    //% block="shift right `Custom.RedRight` by %n"
+    export function RedRightLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Shift Red Row Left
+     */
+    //% block="shift right `Custom.RedLeft` by %n"
+    export function RedLeftLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Shift Green Row Right
+     */
+    //% block="shift right `Custom.GreenRight` by %n"
+    export function GreenRightLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Shift Green Row Left
+     */
+    //% block="shift right `Custom.GreenLeft` by %n"
+    export function GreenLeftLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Shift Yellow Row Right
+     */
+    //% block="shift right `Custom.YellowRight` by %n"
+    export function YellowRightLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
+    /**
+     * Shift Yellow Row Left
+     */
+    //% block="shift right `Custom.YellowLeft` by %n"
+    export function YellowLeftLaser(n: number): void {
+        for (let i = 0; i < n; i++) {
+            blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
 
     /**
      * Cursor Move Orientation One
