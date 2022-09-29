@@ -1,6 +1,6 @@
 {
     "*": {
-        "namespace": "CursorOrientationOne1",
+        "namespace": "CursorOrientationOne",
         "dataEncoding": "base64"
     },
     "ArrowUpOrange": {
