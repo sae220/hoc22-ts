@@ -21,12 +21,10 @@ enum Custom {
 }
 
 enum TwoDirection {
-    //% blockIdentity="blocks.custom" enumval=999 block="Shift Left"
-    //% jres alias=SHIFT_LEFT
-    GreenSlide = SixDirection.Left,
-    //% blockIdentity="blocks.custom" enumval=998 block="Shift Right"
-    //% jres alias=SHIFT_Right
-    RedSlide = SixDirection.Right,
+    //% block="`Block.MagentaConcrete`"
+    Left,
+    //% block="`Block.LimeConcrete`"
+    Right
 }
 
 
@@ -384,10 +382,10 @@ namespace hoc22 {
         let selectedBlock = Block.WhiteConcrete
 
         switch (d) {
-            case TwoDirection.GreenSlide:
+            case TwoDirection.Left:
                 selectedBlock = Block.OrangeConcrete
                 break;
-            case TwoDirection.RedSlide:
+            case TwoDirection.Right:
                 selectedBlock = Block.MagentaConcrete
                 break;
         }
@@ -403,10 +401,10 @@ namespace hoc22 {
         let selectedBlock = Block.WhiteConcrete
 
         switch (d) {
-            case TwoDirection.GreenSlide:
+            case TwoDirection.Left:
                 selectedBlock = Block.LightBlueConcrete
                 break;
-            case TwoDirection.RedSlide:
+            case TwoDirection.Right:
                 selectedBlock = Block.YellowConcrete
                 break;
         }
@@ -422,10 +420,10 @@ namespace hoc22 {
         let selectedBlock = Block.WhiteConcrete
 
         switch (d) {
-            case TwoDirection.GreenSlide:
+            case TwoDirection.Left:
                 selectedBlock = Block.LimeConcrete
                 break;
-            case TwoDirection.RedSlide:
+            case TwoDirection.Right:
                 selectedBlock = Block.PinkConcrete
                 break;
         }
