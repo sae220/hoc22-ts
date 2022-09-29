@@ -9,8 +9,7 @@
         "README.md",
         "hoc22.ts",
         "tutorial-info-cache.json",
-        "custom.jres",
-        "test.jres"
+        "custom.jres"
     ],
     "targetVersions": {
         "target": "1.6.27",
