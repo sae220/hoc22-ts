@@ -27,6 +27,20 @@ enum TwoDirection {
     Right
 }
 
+enum CursorOrientationOne {
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
+    ArrowUpOrange = 899,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
+    ArrowDownMagenta = 898,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
+    ArrowLeftBlue = 897,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
+    ArrowRightYellow = 896
+}
 
 // global variables
 const placeBlockMechanicsCommunicationPos = world(0, 64, 0);
@@ -36,6 +50,34 @@ const communicationsTimeout = 100;
 
 //%  block="Hour of Code 2022" weight=200 color=#6100ff icon="\u26EB"
 namespace hoc22 {
+
+    /**
+     * Cursor Move Orientation One
+     */
+    //% block="cursor move %direction by %n"
+    export function cursorMoveOrientationOne(direction: CursorOrientationOne, n: number): void {
+        let block = Block.WhiteConcrete
+        switch (direction) {
+            case CursorOrientationOne.ArrowUpOrange:
+                block = Block.OrangeConcrete
+                break;
+            case CursorOrientationOne.ArrowDownMagenta:
+                block = Block.MagentaConcrete
+                break;
+            case CursorOrientationOne.ArrowLeftBlue:
+                block = Block.LightBlueConcrete
+                break;
+            case CursorOrientationOne.ArrowRightYellow:
+                block = Block.YellowConcrete
+                break;
+        }
+
+        for (let i = 0; i < n; i++) {
+            blocks.place(block, placeBlockMechanicsCommunicationPos)
+            loops.pause(communicationsTimeout)
+        }
+    }
+
 
     /**
      * Summon Magenta Block
