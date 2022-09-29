@@ -80,7 +80,7 @@ namespace hoc22 {
     /**
      * Shift Red Row Left
      */
-    //% block="shift right `Custom.RedLeft` by %n"
+    //% block="shift left `Custom.RedLeft` by %n"
     export function RedLeftLaser(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
@@ -102,7 +102,7 @@ namespace hoc22 {
     /**
      * Shift Green Row Left
      */
-    //% block="shift right `Custom.GreenLeft` by %n"
+    //% block="shift left `Custom.GreenLeft` by %n"
     export function GreenLeftLaser(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
@@ -124,7 +124,7 @@ namespace hoc22 {
     /**
      * Shift Yellow Row Left
      */
-    //% block="shift right `Custom.YellowLeft` by %n"
+    //% block="shift left `Custom.YellowLeft` by %n"
     export function YellowLeftLaser(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(LIME_CONCRETE, placeBlockMechanicsCommunicationPos)
