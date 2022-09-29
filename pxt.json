@@ -10,7 +10,8 @@
         "hoc22.ts",
         "tutorial-info-cache.json",
         "custom.jres",
-        "CursorOrientationOne.jres"
+        "CursorOrientationOne.jres",
+        "RedLaserSlide.jres"
     ],
     "targetVersions": {
         "target": "1.6.27",
