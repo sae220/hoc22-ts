@@ -63,7 +63,7 @@ namespace hoc22 {
     /**
     * Shift Red Row
     */
-    //% block="Shift Red Row %direction by %n"
+    //% block="shift %direction by %n"
     export function RedLaser(direction: RedLaserSlide, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
