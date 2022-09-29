@@ -27,7 +27,7 @@ enum TwoDirection {
     Right
 }
 
-enum CursorOrientationOne {
+enum CursorOrientationOne1 {
     //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = 899,
@@ -55,19 +55,19 @@ namespace hoc22 {
      * Cursor Move Orientation One
      */
     //% block="cursor move %direction by %n"
-    export function cursorMoveOrientationOne(direction: CursorOrientationOne, n: number): void {
+    export function cursorMoveOrientationOne(direction: CursorOrientationOne1, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
-            case CursorOrientationOne.ArrowUpOrange:
+            case CursorOrientationOne1.ArrowUpOrange:
                 block = Block.OrangeConcrete
                 break;
-            case CursorOrientationOne.ArrowDownMagenta:
+            case CursorOrientationOne1.ArrowDownMagenta:
                 block = Block.MagentaConcrete
                 break;
-            case CursorOrientationOne.ArrowLeftBlue:
+            case CursorOrientationOne1.ArrowLeftBlue:
                 block = Block.LightBlueConcrete
                 break;
-            case CursorOrientationOne.ArrowRightYellow:
+            case CursorOrientationOne1.ArrowRightYellow:
                 block = Block.YellowConcrete
                 break;
         }
