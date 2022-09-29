@@ -28,9 +28,17 @@ enum TwoDirection {
 }
 
 enum CursorOrientationOne1 {
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = 899,
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
     ArrowDownMagenta = 898,
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = 897,
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = 896
 }
 
