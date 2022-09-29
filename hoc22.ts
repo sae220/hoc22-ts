@@ -21,7 +21,9 @@ enum Custom {
 }
 
 enum TwoDirection {
+    //% block="`Block.MagentaConcrete`"
     Left,
+    //% block="`Block.LimeConcrete`"
     Right
 }
 
