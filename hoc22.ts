@@ -309,7 +309,7 @@ namespace hoc22 {
     /**
      * Rotate Outer Ring Clockwise
      */
-    //% block="rotate outer-ring clockwise by %n"
+    //% block="rotate `Custom.OuterClockwise` by %n"
     export function outerRingClockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.OrangeConcrete)
@@ -319,7 +319,7 @@ namespace hoc22 {
     /**
      * Rotate Outer Ring Counterclockwise
      */
-    //% block="rotate outer-ring counterclockwise by %n"
+    //% block="rotate `Custom.OuterCounterClockwise` by %n"
     export function outerRingCounterclockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.MagentaConcrete)
@@ -329,7 +329,7 @@ namespace hoc22 {
     /**
      * Rotate Middle Ring Clockwise
      */
-    //% block="rotate middle-ring clockwise by %n"
+    //% block="rotate `Custom.MiddleClockwise` by %n"
     export function middleRingClockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.LightBlueConcrete)
@@ -339,7 +339,7 @@ namespace hoc22 {
     /**
      * Rotate Middle Ring Counterclockwise
      */
-    //% block="rotate middle-ring counterclockwise by %n"
+    //% block="rotate `Custom.MiddleCounterClockwise` by %n"
     export function middleRingCounterclockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.YellowConcrete)
@@ -349,7 +349,7 @@ namespace hoc22 {
     /**
      * Rotate Inner Ring Clockwise
      */
-    //% block="rotate inner-ring clockwise by %n"
+    //% block="rotate `Custom.InnerClockwise` by %n"
     export function innerRingClockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.LimeConcrete)
@@ -359,7 +359,7 @@ namespace hoc22 {
     /**
      * Rotate Inner Ring Counterclockwise
      */
-    //% block="rotate inner-ring counterclockwise by %n"
+    //% block="rotate `Custom.InnerCounterClockwise` by %n"
     export function innerRingCounterclockwise(n: number): void {
         for (let i = 0; i < n; i++) {
             placeBlockSignal(Block.PinkConcrete)
