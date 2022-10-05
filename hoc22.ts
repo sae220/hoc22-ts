@@ -27,15 +27,15 @@ enum TwoDirection {
     Right
 }
 
-enum FourDirectionUpDown {
+enum FourDirectionUpDown  {
     //% block="up"
-    Up,
+    Up = SixDirection.Up,
     //% block="down"
-    Down,
+    Down = SixDirection.Down,
     //% block="left"
-    Left,
+    Left = SixDirection.Left,
     //% block="right"
-    Right
+    Right = SixDirection.Right
 }
 
 enum RedLaserSlide {
@@ -207,20 +207,7 @@ namespace hoc22 {
      */
     //% block="clay ball move %d by %n"
     export function clayBallMove(d: FourDirectionUpDown, n: number): void {
-        switch (d) {
-            case FourDirectionUpDown.Up:
-                agent.move(SixDirection.Up, n)
-                break;
-            case FourDirectionUpDown.Down:
-                agent.move(SixDirection.Down, n)
-                break;
-            case FourDirectionUpDown.Left:
-                agent.move(SixDirection.Left, n)
-                break;
-            case FourDirectionUpDown.Down:
-                agent.move(SixDirection.Down, n)
-                break;
-        }
+        agent.move(d, n)
         
     }
 
