@@ -27,6 +27,17 @@ enum TwoDirection {
     Right
 }
 
+enum FourDirectionUpDown {
+    //% block="up"
+    Up,
+    //% block="down"
+    Down,
+    //% block="left"
+    Left,
+    //% block="right"
+    Right
+}
+
 enum RedLaserSlide {
     //% blockIdentity="blocks.custom" enumval=971 block="Red Shift Right"
     //% jres alias=RED_SHIFT_RIGHT
@@ -195,8 +206,22 @@ namespace hoc22 {
      * Clay Ball Move
      */
     //% block="clay ball move %d by %n"
-    export function clayBallMove(d: SixDirection, n: number): void {
-        agent.move(d, n)
+    export function clayBallMove(d: FourDirectionUpDown, n: number): void {
+        switch (d) {
+            case FourDirectionUpDown.Up:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionUpDown.Down:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionUpDown.Left:
+                agent.move(SixDirection.Left, n)
+                break;
+            case FourDirectionUpDown.Down:
+                agent.move(SixDirection.Down, n)
+                break;
+        }
+        
     }
 
     /**
