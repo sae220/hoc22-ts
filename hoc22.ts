@@ -289,23 +289,23 @@ namespace hoc22 {
     /**
      * Activate Yellow Cannon
      */
-    //% block="activate `Block.YellowConcrete` cannon"
+    //% block="activate `Custom.YellowCannon` cannon"
     export function yellowCannon(): void {
         placeBlockSignal(Block.YellowConcrete)
     }
 
     /**
-     * Activate Lime Cannon
+     * Activate Green Cannon
      */
-    //% block="activate `Block.LimeConcrete` cannon"
+    //% block="activate `Custom.GreenCannon` cannon"
     export function limeCannon(): void {
         placeBlockSignal(Block.LimeConcrete)
     }
 
     /**
-     * Activate Yellow Cannon
+     * Activate Blue Cannon
      */
-    //% block="activate `Block.LightBlueConcrete` cannon"
+    //% block="activate `Custom.BlueCannon` cannon"
     export function lightBlueCannon(): void {
         placeBlockSignal(Block.LightBlueConcrete)
     }
@@ -313,7 +313,7 @@ namespace hoc22 {
     /**
      * Activate Magenta Cannon
      */
-    //% block="activate `Block.MagentaConcrete` cannon"
+    //% block="activate `Custom.MagentaCannon` cannon"
     export function magentaCannon(): void {
         placeBlockSignal(Block.MagentaConcrete)
     }
