@@ -125,7 +125,7 @@ namespace hoc22 {
     /**
      * Summon Magenta Block
      */
-    //% block="drop %n `Block.MagentaConcrete`"
+    //% block="drop %n `Custom.ArrowDownMagenta`"
     export function summonColoredBlockMagenta(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos);
@@ -135,7 +135,7 @@ namespace hoc22 {
     /**
      * Summon Light Blue Block
      */
-    //% block="drop %n `Block.LightBlueConcrete`"
+    //% block="drop %n `Custom.ArrowLeftBlue`"
     export function summonColoredBlockLightBlue(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos);
@@ -145,7 +145,7 @@ namespace hoc22 {
     /**
      * Summon Yellow Block
      */
-    //% block="drop %n `Block.YellowConcrete`"
+    //% block="drop %n `Custom.ArrowRightYellow`"
     export function summonColoredBlockYellow(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos);
@@ -155,7 +155,7 @@ namespace hoc22 {
     /**
      * Summon Green Block
      */
-    //% block="drop %n `Block.LimeConcrete`"
+    //% block="drop %n `Custom.ArrowUpOrange`"
     export function summonColoredBlockLime(n: number): void {
         for (let i = 0; i < n; i++) {
             blocks.place(Block.LimeConcrete, placeBlockMechanicsCommunicationPos);
@@ -504,28 +504,28 @@ namespace hoc22 {
     /**
      * Move Armor to Light Blue
      */
-    //% block="flip `Block.LightBlueCarpet` lever"
+    //% block="flip `Custom.ArrowLeftBlue` lever"
     export function teleportLightBlueLever(): void {
         placeBlockSignal(Block.LightBlueConcrete)
     }
     /**
      * Move Armor to Magenta
      */
-    //% block="flip `Block.MagentaCarpet` lever"
+    //% block="flip `Custom.ArrowDownMagenta` lever"
     export function teleportMagentaLever(): void {
         placeBlockSignal(Block.MagentaConcrete)
     }
     /**
      * Move Armor to Yellow
      */
-    //% block="flip `Block.YellowCarpet` lever"
+    //% block="flip `Custom.ArrowRightYellow` lever"
     export function teleportYellowLever(): void {
         placeBlockSignal(Block.YellowConcrete)
     }
     /**
      * Move Armor to Orange
      */
-    //% block="flip `Block.OrangeCarpet` lever"
+    //% block="flip `Custom.ArrowUpOrange` lever"
     export function teleportOrangeLever(): void {
         placeBlockSignal(Block.OrangeConcrete)
     }
@@ -564,7 +564,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Red
       */
-    //% block="swap `Block.RedCarpet` side"
+    //% block="swap `Custom.ArrowDownMagenta` side"
     export function dinnerTableSwapRed(): void {
         blocks.place(Block.OrangeConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -572,7 +572,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Green
       */
-    //% block="swap `Block.LimeCarpet` side"
+    //% block="swap `Custom.ArrowUpOrange` side"
     export function dinnerTableSwapGreen(): void {
         blocks.place(Block.YellowConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -580,7 +580,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Blue
       */
-    //% block="swap `Block.BlueCarpet` side"
+    //% block="swap `Custom.ArrowLeftBlue` side"
     export function dinnerTableSwapBlue(): void {
         blocks.place(Block.LightBlueConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
@@ -588,7 +588,7 @@ namespace hoc22 {
     /**
       * Dinner Table Swap Yellow
       */
-    //% block="swap `Block.YellowCarpet` side"
+    //% block="swap `Custom.ArrowRightYellow` side"
     export function dinnerTableSwapYellow(): void {
         blocks.place(Block.MagentaConcrete, placeBlockMechanicsCommunicationPos)
         loops.pause(communicationsTimeout)
