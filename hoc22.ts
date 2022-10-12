@@ -712,7 +712,7 @@ namespace hoc22 {
     /**
      * Move King
      */
-    //% block="move king %direction by %n"
+    //% block="move `Custom.KingIcon` king %direction by %n"
     export function kingMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
@@ -738,7 +738,7 @@ namespace hoc22 {
     /**
      * Move Queen
      */
-    //% block="move queen %direction by %n"
+    //% block="move `Custom.QueenIcon` queen %direction by %n"
     export function queenMove(direction: Custom, n: number): void {
         let block = Block.WhiteConcrete
         switch (direction) {
