@@ -220,6 +220,14 @@ namespace hoc22 {
     }
 
     /**
+     * Place Block
+     */
+    //% block="place `Block.CarvedPumpkin`"
+    export function placePumpkin(): void {
+        placeBlockSignal(Block.LimeConcrete)
+    }
+
+    /**
     * Place Magenta Concrete
     */
     //% block="place `Block.MagentaConcrete` block"
