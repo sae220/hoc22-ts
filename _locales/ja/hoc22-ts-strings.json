@@ -28,7 +28,7 @@
   "hoc22.cursorMoveOrientationOneDown|block": "カーソル移動 `カスタム.アローダウンマゼンタ` によって %n",
   "hoc22.cursorMoveOrientationOneLeft|block": "カーソル移動 `カスタム.矢印左青` によって %n",
   "hoc22.cursorMoveOrientationOneRight|block": "カーソル移動 `カスタム.矢印右黄色` %n",
-  "hoc22.cursorMoveOrientationOneUp|block": "カーソル移動 `カスタム.アローアップオレンジ` %n",
+  "hoc22.cursorMoveOrientationOneUp|block": "カーソルを`Custom.ArrowUpOrange`に%n動かす",
   "hoc22.cursorMoveOrientationTwoDown|block": "カーソル移動 `カスタム.アローダウンオレンジ` %n",
   "hoc22.cursorMoveOrientationTwoLeft|block": "カーソル移動 `カスタム.矢印左黄色` %n",
   "hoc22.cursorMoveOrientationTwoRight|block": "カーソル移動 `カスタム.矢印右青` %n",
