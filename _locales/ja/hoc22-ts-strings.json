@@ -47,9 +47,9 @@
   "hoc22.innerRingClockwise|block": "「カスタム.内側時計回り」を回転させます %n",
   "hoc22.innerRingCounterclockwise|block": "「カスタム.インナー反時計回り」を回転させます %n",
   "hoc22.kingMove|block": "`Custom.KingIcon`キングを%directionに%nブロック移動させる",
-  "hoc22.lightBlueCannon|block": "「カスタム・ブルーキャノン」キャノン発動",
-  "hoc22.limeCannon|block": "「カスタム・グリーンキャノン」キャノン発動",
-  "hoc22.magentaCannon|block": "「カスタム.マゼンタキャノン」キャノンをアクティブにする",
+  "hoc22.lightBlueCannon|block": "`Custom.BlueCannon`キャノンを発射する",
+  "hoc22.limeCannon|block": "`Custom.GreenCannon`キャノンを発射する",
+  "hoc22.magentaCannon|block": "`Custom.MagentaCannon`キャノンを発射する",
   "hoc22.middleRingClockwise|block": "「カスタム.ミドル時計回り」を回転させます %n",
   "hoc22.middleRingCounterclockwise|block": "`カスタム.ミドルカウンタークロック回り`を回転させます %n",
   "hoc22.minecraftSortingCreeper|block": "ソート %n `カスタム.クリーパーフェイス`",
@@ -97,7 +97,7 @@
   "hoc22.teleportYellowLever|block": "`Custom.ArrowRightYellow`レバーを引く",
   "hoc22.toggleLight|block": "「ブロック.レッドストーンランプ」をオンにします",
   "hoc22.waitForBlock|block": "ブロックを待つ",
-  "hoc22.yellowCannon|block": "「カスタム.イエローキャノン」キャノンをアクティブにする",
+  "hoc22.yellowCannon|block": "`Custom.YellowCannon`キャノンを発射する",
   "hoc22|block": "アワーオブコード2022",
   "{id:category}Hoc22": "ホック22"
 }
